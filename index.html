@@ -1,0 +1,1146 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>আরবি-বাংলা অভিধান | Arabic-Bangla Dictionary</title>
+
+<!-- ═══ PWA ═══ -->
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#c9a84c">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="আরবি অভিধান">
+<link rel="apple-touch-icon" href="icon-192.png">
+<link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
+
+<link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Hind+Siliguri:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --deep-blue:#0a1628;--royal-blue:#0d2247;--mid-blue:#1a3a6b;
+    --accent-gold:#c9a84c;--accent-gold-light:#f0d080;
+    --light-blue:#4a90d9;--pale-blue:#a8c8f0;--white:#f0f4ff;
+    --text-light:#d0e4ff;--text-muted:#8ab0d8;
+    --card-bg:rgba(13,34,71,0.78);--card-border:rgba(201,168,76,0.35);
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{font-family:'Hind Siliguri',sans-serif;background:var(--deep-blue);color:var(--white);min-height:100vh;overflow-x:hidden;}
+
+  body::before{
+    content:'';position:fixed;inset:0;z-index:-2;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1400 800'%3E%3Cdefs%3E%3ClinearGradient id='sk' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%230a1628'/%3E%3Cstop offset='1' stop-color='%230d2247'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect fill='url(%23sk)' width='1400' height='800'/%3E%3Ccircle cx='1150' cy='90' r='50' fill='%23c9a84c' opacity='0.15'/%3E%3Ccircle cx='1168' cy='76' r='42' fill='%230a1628' opacity='0.72'/%3E%3Ccircle cx='80' cy='55' r='2' fill='%23c9a84c' opacity='0.45'/%3E%3Ccircle cx='200' cy='30' r='1.5' fill='%23f0d080' opacity='0.5'/%3E%3Ccircle cx='380' cy='65' r='2' fill='%23c9a84c' opacity='0.35'/%3E%3Ccircle cx='520' cy='25' r='1.5' fill='%23f0d080' opacity='0.4'/%3E%3Ccircle cx='700' cy='50' r='2' fill='%23c9a84c' opacity='0.3'/%3E%3Ccircle cx='900' cy='20' r='1.5' fill='%23f0d080' opacity='0.45'/%3E%3Ccircle cx='1050' cy='60' r='2' fill='%23c9a84c' opacity='0.3'/%3E%3Ccircle cx='140' cy='100' r='1' fill='%23a8c8f0' opacity='0.3'/%3E%3Ccircle cx='320' cy='85' r='1' fill='%23a8c8f0' opacity='0.3'/%3E%3Ccircle cx='640' cy='40' r='1' fill='%23a8c8f0' opacity='0.3'/%3E%3Ccircle cx='820' cy='95' r='1' fill='%23a8c8f0' opacity='0.3'/%3E%3Ccircle cx='1250' cy='45' r='1.5' fill='%23f0d080' opacity='0.4'/%3E%3Ccircle cx='1320' cy='80' r='1' fill='%23a8c8f0' opacity='0.3'/%3E%3Crect x='0' y='640' width='1400' height='160' fill='%230d2247' opacity='0.5'/%3E%3Cellipse cx='700' cy='460' rx='140' ry='148' fill='%23122040' stroke='%23c9a84c' stroke-width='1.5' opacity='0.45'/%3E%3Cellipse cx='700' cy='454' rx='128' ry='136' fill='%230d1a35' opacity='0.55'/%3E%3Crect x='600' y='570' width='200' height='80' rx='4' fill='%230d1a35' stroke='%23c9a84c' stroke-width='1' opacity='0.45'/%3E%3Cline x1='700' y1='316' x2='700' y2='304' stroke='%23c9a84c' stroke-width='2' opacity='0.45'/%3E%3Ccircle cx='700' cy='300' r='5' fill='%23c9a84c' opacity='0.4'/%3E%3Crect x='548' y='570' width='52' height='80' rx='2' fill='%230d1a35' stroke='%23c9a84c' stroke-width='0.8' opacity='0.4'/%3E%3Crect x='800' y='570' width='52' height='80' rx='2' fill='%230d1a35' stroke='%23c9a84c' stroke-width='0.8' opacity='0.4'/%3E%3Crect x='536' y='450' width='32' height='192' rx='2' fill='%230d1a35' stroke='%23c9a84c' stroke-width='1' opacity='0.5'/%3E%3Cellipse cx='552' cy='445' rx='20' ry='25' fill='%230d1a35' stroke='%23c9a84c' stroke-width='1' opacity='0.5'/%3E%3Cline x1='552' y1='420' x2='552' y2='407' stroke='%23c9a84c' stroke-width='1.5' opacity='0.45'/%3E%3Ccircle cx='552' cy='404' r='4' fill='%23c9a84c' opacity='0.4'/%3E%3Crect x='832' y='450' width='32' height='192' rx='2' fill='%230d1a35' stroke='%23c9a84c' stroke-width='1' opacity='0.5'/%3E%3Cellipse cx='848' cy='445' rx='20' ry='25' fill='%230d1a35' stroke='%23c9a84c' stroke-width='1' opacity='0.5'/%3E%3Cline x1='848' y1='420' x2='848' y2='407' stroke='%23c9a84c' stroke-width='1.5' opacity='0.45'/%3E%3Ccircle cx='848' cy='404' r='4' fill='%23c9a84c' opacity='0.4'/%3E%3Crect x='390' y='570' width='160' height='90' fill='%230d1a35' stroke='%23c9a84c' stroke-width='0.8' opacity='0.38'/%3E%3Cellipse cx='470' cy='568' rx='65' ry='68' fill='%23122040' stroke='%23c9a84c' stroke-width='1' opacity='0.3'/%3E%3Crect x='850' y='570' width='160' height='90' fill='%230d1a35' stroke='%23c9a84c' stroke-width='0.8' opacity='0.38'/%3E%3Cellipse cx='930' cy='568' rx='65' ry='68' fill='%23122040' stroke='%23c9a84c' stroke-width='1' opacity='0.3'/%3E%3Crect x='240' y='600' width='120' height='60' fill='%230d1a35' stroke='%23c9a84c' stroke-width='0.6' opacity='0.3'/%3E%3Crect x='1040' y='600' width='120' height='60' fill='%230d1a35' stroke='%23c9a84c' stroke-width='0.6' opacity='0.3'/%3E%3Cellipse cx='700' cy='672' rx='180' ry='20' fill='%231a3a6b' opacity='0.25'/%3E%3C/svg%3E");
+    background-size:cover;background-position:center bottom;background-repeat:no-repeat;opacity:.9;
+  }
+  body::after{content:'';position:fixed;inset:0;z-index:-1;
+    background:radial-gradient(ellipse at 50% 0%,rgba(26,58,107,.22) 0%,transparent 70%),
+               linear-gradient(180deg,rgba(10,22,40,.15) 0%,rgba(10,22,40,.5) 100%);
+  }
+
+  /* ── HEADER ── */
+  .header{text-align:center;padding:44px 20px 28px;position:relative;}
+  .header-ornament{font-family:'Amiri',serif;font-size:2rem;color:var(--accent-gold);letter-spacing:8px;opacity:.8;margin-bottom:10px;animation:fadeDown 1s ease both;}
+  .header h1{font-family:'Amiri',serif;font-size:clamp(1.8rem,4vw,3rem);color:var(--accent-gold-light);font-weight:700;line-height:1.3;text-shadow:0 0 40px rgba(201,168,76,.4);animation:fadeDown 1s .2s ease both;}
+  .header .arabic-title{font-family:'Amiri',serif;font-size:1.5rem;color:var(--accent-gold);margin-top:6px;animation:fadeDown 1s .3s ease both;}
+  .header h2{font-size:clamp(.85rem,2vw,1.1rem);color:var(--pale-blue);font-weight:300;letter-spacing:3px;margin-top:8px;animation:fadeDown 1s .4s ease both;}
+  .gold-line{width:180px;height:2px;background:linear-gradient(90deg,transparent,var(--accent-gold),transparent);margin:18px auto;animation:fadeIn 1s .6s ease both;}
+
+  /* ── SEARCH ── */
+  .search-wrap{max-width:540px;margin:0 auto 28px;padding:0 20px;animation:fadeDown 1s .55s ease both;}
+  .search-box{display:flex;background:rgba(13,34,71,.82);border:1.5px solid var(--accent-gold);border-radius:40px;overflow:hidden;box-shadow:0 4px 30px rgba(0,0,0,.4),0 0 20px rgba(201,168,76,.1);}
+  .search-box input{flex:1;background:transparent;border:none;outline:none;padding:13px 22px;font-family:'Hind Siliguri',sans-serif;font-size:1rem;color:var(--white);caret-color:var(--accent-gold);}
+  .search-box input::placeholder{color:var(--text-muted);}
+  .search-box button{background:var(--accent-gold);border:none;padding:0 22px;cursor:pointer;font-size:1.1rem;color:var(--deep-blue);transition:background .3s;}
+  .search-box button:hover{background:var(--accent-gold-light);}
+
+  /* ── TABS ── */
+  .tabs-wrap{max-width:1100px;margin:0 auto;padding:0 20px 30px;animation:fadeIn 1s .7s ease both;}
+  .tabs{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;}
+  .tab{background:rgba(13,34,71,.7);border:1px solid rgba(201,168,76,.38);border-radius:22px;padding:7px 15px;font-size:.8rem;color:var(--pale-blue);cursor:pointer;transition:all .28s;letter-spacing:.4px;}
+  .tab:hover,.tab.active{background:var(--accent-gold);color:var(--deep-blue);font-weight:700;border-color:var(--accent-gold);}
+
+  /* ── MAIN ── */
+  .main{max-width:1150px;margin:0 auto;padding:0 20px 60px;}
+
+  /* ── STATS ── */
+  .stats{display:flex;justify-content:center;gap:36px;padding:20px;background:rgba(13,34,71,.62);border:1px solid rgba(201,168,76,.22);border-radius:16px;margin-bottom:36px;backdrop-filter:blur(10px);flex-wrap:wrap;}
+  .stat{text-align:center;}
+  .stat-num{font-size:1.7rem;font-weight:700;color:var(--accent-gold-light);}
+  .stat-label{font-size:.75rem;color:var(--text-muted);letter-spacing:1px;margin-top:2px;}
+
+  /* ── CATEGORY ── */
+  .category{margin-bottom:44px;animation:fadeUp .55s ease both;}
+  .category-title{display:flex;align-items:center;gap:12px;margin-bottom:18px;}
+  .cat-icon{font-size:1.4rem;}
+  .cat-name{font-family:'Hind Siliguri',sans-serif;font-size:1.15rem;font-weight:700;color:var(--accent-gold-light);letter-spacing:.8px;}
+  .cat-line{flex:1;height:1px;background:linear-gradient(90deg,rgba(201,168,76,.5),transparent);}
+  .cat-count{font-size:.76rem;color:var(--text-muted);}
+
+  /* ── GRID ── */
+  .word-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px;}
+
+  /* ── CARD ── */
+  .card{background:var(--card-bg);border:1px solid var(--card-border);border-radius:13px;padding:16px 18px;backdrop-filter:blur(12px);transition:all .32s ease;position:relative;overflow:hidden;}
+  .card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--accent-gold),transparent);opacity:0;transition:opacity .3s;}
+  .card:hover{transform:translateY(-4px);border-color:rgba(201,168,76,.65);box-shadow:0 12px 36px rgba(0,0,0,.5),0 0 18px rgba(201,168,76,.12);}
+  .card:hover::before{opacity:1;}
+  .card-pronun{font-size:.76rem;color:var(--light-blue);font-style:italic;margin-bottom:7px;}
+  .card-pronun span{color:var(--accent-gold);font-style:normal;}
+  .card-divider{width:100%;height:1px;background:rgba(201,168,76,.2);margin:7px 0;}
+  .card-bangla{font-size:1rem;font-weight:600;color:var(--white);margin-bottom:3px;}
+  .card-meaning{font-size:.79rem;color:var(--text-muted);line-height:1.5;}
+
+  /* ── CARD TOP ROW ── */
+  .card-top{display:flex;align-items:flex-start;justify-content:space-between;gap:8px;margin-bottom:5px;}
+  .card-arabic{font-family:'Amiri',serif;font-size:1.75rem;color:var(--accent-gold-light);text-align:right;line-height:1.4;direction:rtl;flex:1;}
+
+  /* ── VOICE BUTTON ── */
+  .voice-btn{flex-shrink:0;width:34px;height:34px;border-radius:50%;border:1.5px solid rgba(201,168,76,.5);background:rgba(201,168,76,.1);color:var(--accent-gold);font-size:1rem;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .25s;margin-top:4px;padding:0;}
+  .voice-btn:hover{background:var(--accent-gold);color:var(--deep-blue);border-color:var(--accent-gold);transform:scale(1.12);box-shadow:0 0 14px rgba(201,168,76,.5);}
+  .voice-btn.speaking{background:var(--accent-gold);color:var(--deep-blue);border-color:var(--accent-gold);animation:pulse-gold .7s infinite alternate;}
+  @keyframes pulse-gold{from{box-shadow:0 0 6px rgba(201,168,76,.4)}to{box-shadow:0 0 18px rgba(201,168,76,.9);transform:scale(1.1);}}
+
+  /* ── NO RESULT ── */
+  #no-result{display:none;text-align:center;padding:60px 20px;color:var(--text-muted);font-size:1.1rem;}
+
+  /* ── FOOTER ── */
+  footer{text-align:center;padding:20px 20px 40px;font-size:.78rem;color:var(--text-muted);letter-spacing:1px;}
+
+  /* ── ANIMATIONS ── */
+  @keyframes fadeDown{from{opacity:0;transform:translateY(-18px)}to{opacity:1;transform:translateY(0)}}
+  @keyframes fadeUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+  @keyframes fadeIn{from{opacity:0}to{opacity:1}}
+
+  @media(max-width:600px){
+    .word-grid{grid-template-columns:1fr 1fr;gap:9px;}
+    .card{padding:12px 12px;}
+    .card-arabic{font-size:1.4rem;}
+    .stats{gap:18px;}
+    .tab{font-size:.72rem;padding:6px 12px;}
+  }
+  @media(max-width:380px){.word-grid{grid-template-columns:1fr;}}
+  /* ── PWA INSTALL BAR ── */
+  #install-bar{display:none;position:fixed;bottom:0;left:0;right:0;z-index:999;background:linear-gradient(135deg,#0d2247,#1a3a6b);border-top:2px solid var(--accent-gold);padding:14px 20px;align-items:center;gap:12px;box-shadow:0 -4px 24px rgba(0,0,0,.5);}
+  #install-bar .ib-icon{font-size:1.8rem;flex-shrink:0;}
+  #install-bar .ib-text{flex:1;}
+  #install-bar .ib-text strong{display:block;color:var(--accent-gold-light);font-size:.95rem;}
+  #install-bar .ib-text span{font-size:.78rem;color:var(--pale-blue);}
+  #install-btn{background:var(--accent-gold);color:var(--deep-blue);border:none;padding:9px 18px;border-radius:22px;font-family:'Hind Siliguri',sans-serif;font-size:.85rem;font-weight:700;cursor:pointer;white-space:nowrap;transition:all .25s;}
+  #install-btn:hover{background:var(--accent-gold-light);transform:scale(1.04);}
+  #install-dismiss{background:transparent;border:1px solid rgba(201,168,76,.4);color:var(--text-muted);padding:8px 14px;border-radius:22px;font-family:'Hind Siliguri',sans-serif;font-size:.8rem;cursor:pointer;transition:all .25s;white-space:nowrap;}
+  #install-dismiss:hover{border-color:var(--accent-gold);color:var(--white);}
+</style>
+</head>
+<body>
+
+<header class="header">
+  <div class="header-ornament">✦ ﷽ ✦</div>
+  <h1>আরবি–বাংলা অভিধান</h1>
+  <div class="arabic-title">القاموس العربي البنغالي</div>
+  <h2>Arabic – Bangla Dictionary | ১৫০০+ শব্দ · ৩৩ বিভাগ</h2>
+  <div class="gold-line"></div>
+</header>
+
+<div class="search-wrap">
+  <div class="search-box">
+    <input type="text" id="searchInput" placeholder="আরবি, বাংলা বা উচ্চারণে খুঁজুন…" oninput="filterWords()">
+    <button onclick="filterWords()">🔍</button>
+  </div>
+</div>
+
+<div class="tabs-wrap">
+  <div class="tabs" id="tabs">
+    <div class="tab active" onclick="showCat('all',this)">🌐 সবকিছু</div>
+    <div class="tab" onclick="showCat('salat',this)">🕌 ইসলামি</div>
+    <div class="tab" onclick="showCat('quran',this)">📖 কুরআনি</div>
+    <div class="tab" onclick="showCat('greet',this)">👋 অভিবাদন</div>
+    <div class="tab" onclick="showCat('number',this)">🔢 সংখ্যা</div>
+    <div class="tab" onclick="showCat('family',this)">👨‍👩‍👧 পরিবার</div>
+    <div class="tab" onclick="showCat('body',this)">🫀 শরীর</div>
+    <div class="tab" onclick="showCat('food',this)">🍽️ খাবার</div>
+    <div class="tab" onclick="showCat('fruit',this)">🍎 ফলমূল</div>
+    <div class="tab" onclick="showCat('vegetable',this)">🥦 সবজি</div>
+    <div class="tab" onclick="showCat('color',this)">🎨 রং</div>
+    <div class="tab" onclick="showCat('nature',this)">🌿 প্রকৃতি</div>
+    <div class="tab" onclick="showCat('animal',this)">🦁 প্রাণী</div>
+    <div class="tab" onclick="showCat('plant',this)">🌸 গাছপালা</div>
+    <div class="tab" onclick="showCat('verb',this)">⚡ ক্রিয়া</div>
+    <div class="tab" onclick="showCat('adj',this)">✨ বিশেষণ</div>
+    <div class="tab" onclick="showCat('emotion',this)">❤️ অনুভূতি</div>
+    <div class="tab" onclick="showCat('travel',this)">✈️ ভ্রমণ</div>
+    <div class="tab" onclick="showCat('transport',this)">🚌 পরিবহন</div>
+    <div class="tab" onclick="showCat('house',this)">🏠 গৃহ</div>
+    <div class="tab" onclick="showCat('clothes',this)">👗 পোশাক</div>
+    <div class="tab" onclick="showCat('education',this)">📚 শিক্ষা</div>
+    <div class="tab" onclick="showCat('profession',this)">💼 পেশা</div>
+    <div class="tab" onclick="showCat('health',this)">🏥 স্বাস্থ্য</div>
+    <div class="tab" onclick="showCat('sport',this)">⚽ খেলাধুলা</div>
+    <div class="tab" onclick="showCat('tech',this)">💻 প্রযুক্তি</div>
+    <div class="tab" onclick="showCat('money',this)">💰 অর্থ</div>
+    <div class="tab" onclick="showCat('country',this)">🌍 দেশ</div>
+    <div class="tab" onclick="showCat('geography',this)">🗺️ ভূগোল</div>
+    <div class="tab" onclick="showCat('time',this)">⏰ সময়</div>
+    <div class="tab" onclick="showCat('days',this)">📅 দিনসমূহ</div>
+    <div class="tab" onclick="showCat('months',this)">🌙 মাস</div>
+    <div class="tab" onclick="showCat('science',this)">🔬 বিজ্ঞান</div>
+    <div class="tab" onclick="showCat('cooking',this)">🍳 রান্না</div>
+    <div class="tab" onclick="showCat('question',this)">❓ প্রশ্নবাচক</div>
+  </div>
+</div>
+
+<main class="main">
+  <div class="stats">
+    <div class="stat"><div class="stat-num" id="totalCount">0</div><div class="stat-label">মোট শব্দ</div></div>
+    <div class="stat"><div class="stat-num">৩৩+</div><div class="stat-label">বিভাগ</div></div>
+    <div class="stat"><div class="stat-num" id="visibleCount">0</div><div class="stat-label">দৃশ্যমান</div></div>
+  </div>
+  <div id="no-result">কোনো শব্দ পাওয়া যায়নি। অন্য শব্দ দিয়ে খুঁজুন।</div>
+  <div id="dictionary"></div>
+</main>
+
+<footer>
+  <div style="font-family:'Amiri',serif;font-size:1.3rem;color:var(--accent-gold);margin-bottom:8px;">✦ ❁ ✦</div>
+  <span style="color:var(--accent-gold)">আরবি-বাংলা অভিধান</span> · সমস্ত অধিকার সংরক্ষিত<br>
+  <span style="font-family:'Amiri',serif;font-size:1rem;color:var(--accent-gold)">بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيم</span>
+</footer>
+
+<script>
+const data = [
+
+// ════════════════════════════════════════
+// 🕌 ইসলামি শব্দ
+// ════════════════════════════════════════
+{cat:'salat',ar:'بِسْمِ اللَّهِ',pr:'বিসমিল্লাহ',bn:'বিসমিল্লাহ',def:'আল্লাহর নামে শুরু করছি'},
+{cat:'salat',ar:'الْحَمْدُ لِلَّهِ',pr:'আলহামদুলিল্লাহ',bn:'আলহামদুলিল্লাহ',def:'সকল প্রশংসা আল্লাহর জন্য'},
+{cat:'salat',ar:'اللَّهُ أَكْبَر',pr:'আল্লাহু আকবার',bn:'আল্লাহু আকবার',def:'আল্লাহ সবচেয়ে বড়'},
+{cat:'salat',ar:'سُبْحَانَ اللَّهِ',pr:'সুবহানাল্লাহ',bn:'সুবহানাল্লাহ',def:'আল্লাহ পবিত্র'},
+{cat:'salat',ar:'لَا إِلَهَ إِلَّا اللَّهُ',pr:'লা-ইলাহা ইল্লাল্লাহ',bn:'কালিমা তাওহিদ',def:'আল্লাহ ছাড়া কোনো উপাস্য নেই'},
+{cat:'salat',ar:'مُحَمَّدٌ رَسُولُ اللَّهِ',pr:'মুহাম্মাদুর রাসুলুল্লাহ',bn:'রিসালাতের সাক্ষ্য',def:'মুহাম্মাদ (সা.) আল্লাহর রাসুল'},
+{cat:'salat',ar:'إِنْ شَاءَ اللَّهُ',pr:'ইনশাআল্লাহ',bn:'ইনশাআল্লাহ',def:'যদি আল্লাহ চান'},
+{cat:'salat',ar:'مَاشَاءَ اللَّهُ',pr:'মাশাআল্লাহ',bn:'মাশাআল্লাহ',def:'আল্লাহ যা চেয়েছেন তাই হয়েছে'},
+{cat:'salat',ar:'جَزَاكَ اللَّهُ خَيْرًا',pr:'জাযাকাল্লাহু খাইরান',bn:'আল্লাহ আপনাকে উত্তম পুরস্কার দিন',def:'কৃতজ্ঞতা প্রকাশের দোয়া'},
+{cat:'salat',ar:'أَسْتَغْفِرُ اللَّهَ',pr:'আস্তাগফিরুল্লাহ',bn:'ক্ষমাপ্রার্থনা',def:'আল্লাহর কাছে মাফ চাওয়া'},
+{cat:'salat',ar:'صَلاة',pr:'সালাত / সলাত',bn:'নামাজ',def:'ইসলামে পাঁচ ওয়াক্ত নামাজ'},
+{cat:'salat',ar:'صَوْم',pr:'সাওম',bn:'রোজা / সিয়াম',def:'ইসলামি উপবাস পালন'},
+{cat:'salat',ar:'زَكاة',pr:'যাকাত',bn:'যাকাত',def:'বাৎসরিক বাধ্যতামূলক দান'},
+{cat:'salat',ar:'حَج',pr:'হাজ্জ',bn:'হজ',def:'মক্কায় বার্ষিক তীর্থযাত্রা'},
+{cat:'salat',ar:'مَسْجِد',pr:'মাসজিদ',bn:'মসজিদ',def:'মুসলিমদের ইবাদতখানা'},
+{cat:'salat',ar:'إِمَام',pr:'ইমাম',bn:'ইমাম',def:'নামাজে নেতৃত্বদানকারী'},
+{cat:'salat',ar:'أَذَان',pr:'আযান',bn:'আযান',def:'নামাজের আহ্বান ধ্বনি'},
+{cat:'salat',ar:'وُضُوء',pr:'উযু',bn:'অজু',def:'নামাজের আগে পবিত্রতা অর্জন'},
+{cat:'salat',ar:'طَهَارَة',pr:'তাহারা',bn:'পবিত্রতা',def:'শরীর ও মন পরিষ্কার রাখা'},
+{cat:'salat',ar:'دُعَاء',pr:'দোয়া',bn:'দোয়া',def:'আল্লাহর কাছে প্রার্থনা'},
+{cat:'salat',ar:'تَوْبَة',pr:'তাওবা',bn:'তাওবা',def:'পাপ থেকে ফিরে আসা'},
+{cat:'salat',ar:'صَدَقَة',pr:'সাদাকা',bn:'সদকা',def:'স্বেচ্ছামূলক দান'},
+{cat:'salat',ar:'جَنَّة',pr:'জান্নাত',bn:'জান্নাত',def:'বেহেশত/স্বর্গ'},
+{cat:'salat',ar:'نَار',pr:'নার',bn:'জাহান্নাম',def:'নরক/দোজখ'},
+{cat:'salat',ar:'مَلَك',pr:'মালাক',bn:'ফেরেশতা',def:'আল্লাহর দূত'},
+{cat:'salat',ar:'نَبِي',pr:'নবি',bn:'নবি',def:'আল্লাহর প্রেরিত মানুষ'},
+{cat:'salat',ar:'رَسُول',pr:'রাসুল',bn:'রাসুল',def:'আল্লাহর বার্তাবাহক'},
+{cat:'salat',ar:'قِبْلَة',pr:'কিবলা',bn:'কিবলা',def:'মক্কার দিক, নামাজের মুখ'},
+{cat:'salat',ar:'حَلَال',pr:'হালাল',bn:'হালাল',def:'ইসলামে বৈধ বিষয়'},
+{cat:'salat',ar:'حَرَام',pr:'হারাম',bn:'হারাম',def:'ইসলামে নিষিদ্ধ বিষয়'},
+
+// ════════════════════════════════════════
+// 📖 কুরআনি শব্দ
+// ════════════════════════════════════════
+{cat:'quran',ar:'قُرْآن',pr:'কুরআন',bn:'কুরআন',def:'ইসলামের পবিত্র গ্রন্থ'},
+{cat:'quran',ar:'سُورَة',pr:'সুরা',bn:'সুরা',def:'কুরআনের একটি অধ্যায়'},
+{cat:'quran',ar:'آيَة',pr:'আয়াত',bn:'আয়াত',def:'কুরআনের একটি বাক্য বা পদ'},
+{cat:'quran',ar:'رَحْمَة',pr:'রাহমা',bn:'দয়া/রহমত',def:'আল্লাহর অপার দয়া'},
+{cat:'quran',ar:'هِدَايَة',pr:'হিদায়া',bn:'হিদায়াত',def:'সঠিক পথের দিকনির্দেশনা'},
+{cat:'quran',ar:'صِرَاطٌ مُسْتَقِيم',pr:'সিরাতুল মুস্তাকিম',bn:'সরল পথ',def:'আল্লাহর সঠিক ও সোজা পথ'},
+{cat:'quran',ar:'رَبّ',pr:'রব্ব',bn:'প্রভু/রব',def:'পালনকর্তা, মালিক'},
+{cat:'quran',ar:'إِيمَان',pr:'ইমান',bn:'ইমান',def:'বিশ্বাস ও আস্থা'},
+{cat:'quran',ar:'إِسْلَام',pr:'ইসলাম',bn:'ইসলাম',def:'আল্লাহর কাছে আত্মসমর্পণ'},
+{cat:'quran',ar:'تَقْوَى',pr:'তাকওয়া',bn:'তাকওয়া',def:'আল্লাহর ভয় ও সংযম'},
+{cat:'quran',ar:'أُمَّة',pr:'উম্মাহ',bn:'উম্মাহ',def:'মুসলিম সম্প্রদায়'},
+{cat:'quran',ar:'كِتَاب',pr:'কিতাব',bn:'কিতাব',def:'ঐশ্বরিক গ্রন্থ'},
+{cat:'quran',ar:'حِكْمَة',pr:'হিকমা',bn:'প্রজ্ঞা',def:'গভীর জ্ঞান ও বুদ্ধিমত্তা'},
+{cat:'quran',ar:'شُكْر',pr:'শুকর',bn:'কৃতজ্ঞতা',def:'নেয়ামতের জন্য ধন্যবাদ দেওয়া'},
+{cat:'quran',ar:'صَبْر',pr:'সবর',bn:'ধৈর্য',def:'বিপদে ধৈর্য ধারণ করা'},
+{cat:'quran',ar:'عَدْل',pr:'আদল',bn:'ন্যায়বিচার',def:'সমান ও সুষম বিচার'},
+{cat:'quran',ar:'أَمَانَة',pr:'আমানা',bn:'আমানত',def:'বিশ্বাসযোগ্যতা ও দায়িত্ব'},
+{cat:'quran',ar:'صِدْق',pr:'সিদক',bn:'সততা',def:'সত্যবাদিতা ও সৎ থাকা'},
+{cat:'quran',ar:'رِزْق',pr:'রিজক',bn:'রিজিক',def:'আল্লাহর দেওয়া জীবিকা'},
+{cat:'quran',ar:'نِعْمَة',pr:'নিআমা',bn:'নেয়ামত',def:'আল্লাহর অনুগ্রহ ও দান'},
+
+// ════════════════════════════════════════
+// 👋 অভিবাদন ও সৌজন্য
+// ════════════════════════════════════════
+{cat:'greet',ar:'مَرْحَبًا',pr:'মারহাবান',bn:'স্বাগতম',def:'আনন্দের সাথে স্বাগত'},
+{cat:'greet',ar:'السَّلَامُ عَلَيْكُمْ',pr:'আস্সালামু আলাইকুম',bn:'সালাম',def:'আপনার উপর শান্তি বর্ষিত হোক'},
+{cat:'greet',ar:'وَعَلَيْكُمُ السَّلَامُ',pr:'ওয়া আলাইকুমুস সালাম',bn:'সালামের জবাব',def:'আপনার উপরেও শান্তি হোক'},
+{cat:'greet',ar:'كَيْفَ حَالُك',pr:'কাইফা হালুক',bn:'কেমন আছেন?',def:'স্বাস্থ্য ও অবস্থা জিজ্ঞেস'},
+{cat:'greet',ar:'أَنَا بِخَيْر',pr:'আনা বিখাইর',bn:'আমি ভালো আছি',def:'নিজের সুস্থতা জানানো'},
+{cat:'greet',ar:'شُكْرًا',pr:'শুকরান',bn:'ধন্যবাদ',def:'কৃতজ্ঞতা প্রকাশ'},
+{cat:'greet',ar:'مِن فَضْلِك',pr:'মিন ফাদলিক',bn:'অনুগ্রহ করে',def:'বিনম্র অনুরোধ'},
+{cat:'greet',ar:'عَفْوًا',pr:'আফওয়ান',bn:'মাফ করবেন / স্বাগত',def:'মাফ চাওয়া বা স্বাগতের জবাব'},
+{cat:'greet',ar:'صَبَاحُ الْخَيْر',pr:'সাবাহুল খাইর',bn:'সুপ্রভাত',def:'সকালের অভিবাদন'},
+{cat:'greet',ar:'مَسَاءُ الْخَيْر',pr:'মাসাউল খাইর',bn:'শুভ সন্ধ্যা',def:'সন্ধ্যার অভিবাদন'},
+{cat:'greet',ar:'إِلَى اللِّقَاء',pr:'ইলাল লিকা',bn:'আবার দেখা হবে',def:'বিদায়কালীন কথা'},
+{cat:'greet',ar:'مَعَ السَّلَامَة',pr:'মাআস সালামা',bn:'ভালো থাকুন / বিদায়',def:'নিরাপদে যান'},
+{cat:'greet',ar:'نَعَم',pr:'নাআম',bn:'হ্যাঁ',def:'সম্মতি প্রকাশ'},
+{cat:'greet',ar:'لَا',pr:'লা',bn:'না',def:'অসম্মতি প্রকাশ'},
+{cat:'greet',ar:'مَا اسْمُك',pr:'মাসমুক',bn:'আপনার নাম কী?',def:'পরিচয় জিজ্ঞাসা'},
+{cat:'greet',ar:'اسْمِي',pr:'ইসমি',bn:'আমার নাম',def:'নিজের নাম বলা'},
+{cat:'greet',ar:'أَهْلًا وَسَهْلًا',pr:'আহলান ওয়া সাহলান',bn:'স্বাগত ও আনন্দ',def:'উষ্ণ স্বাগত জানানো'},
+{cat:'greet',ar:'تَفَضَّل',pr:'তাফাদ্দাল',bn:'আসুন / বসুন',def:'আমন্ত্রণ জানানো'},
+{cat:'greet',ar:'آسِف',pr:'আসিফ',bn:'দুঃখিত',def:'ভুলের জন্য মাফ চাওয়া'},
+{cat:'greet',ar:'لَا بَأْس',pr:'লা বাস',bn:'কোনো সমস্যা নেই',def:'সব ঠিক আছে বলা'},
+
+// ════════════════════════════════════════
+// 🔢 সংখ্যা
+// ════════════════════════════════════════
+{cat:'number',ar:'وَاحِد',pr:'ওয়াহিদ',bn:'এক (১)',def:'প্রথম মৌলিক সংখ্যা'},
+{cat:'number',ar:'اِثْنَان',pr:'ইসনান',bn:'দুই (২)',def:'দ্বিতীয় সংখ্যা'},
+{cat:'number',ar:'ثَلَاثَة',pr:'সালাসা',bn:'তিন (৩)',def:'তৃতীয় সংখ্যা'},
+{cat:'number',ar:'أَرْبَعَة',pr:'আরবাআ',bn:'চার (৪)',def:'চতুর্থ সংখ্যা'},
+{cat:'number',ar:'خَمْسَة',pr:'খামসা',bn:'পাঁচ (৫)',def:'পঞ্চম সংখ্যা'},
+{cat:'number',ar:'سِتَّة',pr:'সিত্তা',bn:'ছয় (৬)',def:'ষষ্ঠ সংখ্যা'},
+{cat:'number',ar:'سَبْعَة',pr:'সাবআ',bn:'সাত (৭)',def:'সপ্তম সংখ্যা'},
+{cat:'number',ar:'ثَمَانِيَة',pr:'সামানিয়া',bn:'আট (৮)',def:'অষ্টম সংখ্যা'},
+{cat:'number',ar:'تِسْعَة',pr:'তিসআ',bn:'নয় (৯)',def:'নবম সংখ্যা'},
+{cat:'number',ar:'عَشَرَة',pr:'আশারা',bn:'দশ (১০)',def:'দশম সংখ্যা'},
+{cat:'number',ar:'أَحَد عَشَر',pr:'আহাদা আশার',bn:'এগারো (১১)',def:'এগারো'},
+{cat:'number',ar:'اثْنَا عَشَر',pr:'ইসনা আশার',bn:'বারো (১২)',def:'বারো'},
+{cat:'number',ar:'عِشْرُون',pr:'ইশরুন',bn:'বিশ (২০)',def:'বিশ সংখ্যা'},
+{cat:'number',ar:'ثَلَاثُون',pr:'সালাসুন',bn:'ত্রিশ (৩০)',def:'ত্রিশ সংখ্যা'},
+{cat:'number',ar:'أَرْبَعُون',pr:'আরবাউন',bn:'চল্লিশ (৪০)',def:'চল্লিশ সংখ্যা'},
+{cat:'number',ar:'خَمْسُون',pr:'খামসুন',bn:'পঞ্চাশ (৫০)',def:'পঞ্চাশ সংখ্যা'},
+{cat:'number',ar:'مِئَة',pr:'মিআ',bn:'একশত (১০০)',def:'একশো সংখ্যা'},
+{cat:'number',ar:'أَلْف',pr:'আলফ',bn:'এক হাজার (১০০০)',def:'হাজার সংখ্যা'},
+{cat:'number',ar:'نِصْف',pr:'নিসফ',bn:'অর্ধেক (½)',def:'দুই ভাগের এক ভাগ'},
+{cat:'number',ar:'رُبْع',pr:'রুবউ',bn:'এক-চতুর্থাংশ (¼)',def:'চার ভাগের এক ভাগ'},
+
+// ════════════════════════════════════════
+// 👨‍👩‍👧 পরিবার
+// ════════════════════════════════════════
+{cat:'family',ar:'أَب',pr:'আব',bn:'বাবা / পিতা',def:'পরিবারের পিতা'},
+{cat:'family',ar:'أُم',pr:'উম্ম',bn:'মা / মাতা',def:'পরিবারের মাতা'},
+{cat:'family',ar:'أَخ',pr:'আখ',bn:'ভাই',def:'একই পিতামাতার পুত্র'},
+{cat:'family',ar:'أُخْت',pr:'উখত',bn:'বোন',def:'একই পিতামাতার কন্যা'},
+{cat:'family',ar:'اِبْن',pr:'ইবন',bn:'ছেলে / পুত্র',def:'পুরুষ সন্তান'},
+{cat:'family',ar:'بِنْت',pr:'বিনত',bn:'মেয়ে / কন্যা',def:'নারী সন্তান'},
+{cat:'family',ar:'جَد',pr:'জাদ্দ',bn:'দাদা / নানা',def:'পিতা বা মাতার পিতা'},
+{cat:'family',ar:'جَدَّة',pr:'জাদ্দা',bn:'দাদি / নানি',def:'পিতা বা মাতার মাতা'},
+{cat:'family',ar:'عَم',pr:'আম্ম',bn:'চাচা / কাকা',def:'পিতার ভাই'},
+{cat:'family',ar:'عَمَّة',pr:'আম্মা',bn:'ফুফু',def:'পিতার বোন'},
+{cat:'family',ar:'خَال',pr:'খাল',bn:'মামা',def:'মাতার ভাই'},
+{cat:'family',ar:'خَالَة',pr:'খালা',bn:'খালা',def:'মাতার বোন'},
+{cat:'family',ar:'زَوْج',pr:'যাওজ',bn:'স্বামী',def:'বিবাহিত পুরুষসঙ্গী'},
+{cat:'family',ar:'زَوْجَة',pr:'যাওজা',bn:'স্ত্রী',def:'বিবাহিত নারীসঙ্গী'},
+{cat:'family',ar:'أُسْرَة',pr:'উসরা',bn:'পরিবার',def:'একসাথে বসবাসকারী স্বজন'},
+{cat:'family',ar:'حَفِيد',pr:'হাফিদ',bn:'নাতি',def:'পুত্রের বা কন্যার পুত্র'},
+{cat:'family',ar:'حَفِيدَة',pr:'হাফিদা',bn:'নাতনি',def:'পুত্রের বা কন্যার কন্যা'},
+{cat:'family',ar:'ابن عم',pr:'ইবনু আম্ম',bn:'চাচাতো ভাই',def:'চাচার ছেলে'},
+{cat:'family',ar:'نِكَاح',pr:'নিকাহ',bn:'বিবাহ',def:'ইসলামি বিবাহ চুক্তি'},
+{cat:'family',ar:'يَتِيم',pr:'ইয়াতিম',bn:'এতিম',def:'পিতাহারা শিশু'},
+
+// ════════════════════════════════════════
+// 🫀 শরীরের অঙ্গ
+// ════════════════════════════════════════
+{cat:'body',ar:'رَأْس',pr:'রাস',bn:'মাথা',def:'দেহের সর্বোচ্চ অংশ'},
+{cat:'body',ar:'وَجْه',pr:'ওয়াজহ',bn:'মুখমণ্ডল',def:'মাথার সামনের অংশ'},
+{cat:'body',ar:'عَيْن',pr:'আইন',bn:'চোখ',def:'দেখার অঙ্গ'},
+{cat:'body',ar:'أُذُن',pr:'উযুন',bn:'কান',def:'শোনার অঙ্গ'},
+{cat:'body',ar:'أَنْف',pr:'আনফ',bn:'নাক',def:'ঘ্রাণ নেওয়ার অঙ্গ'},
+{cat:'body',ar:'فَم',pr:'ফামম',bn:'মুখ / ঠোঁট',def:'কথা বলার ও খাওয়ার অঙ্গ'},
+{cat:'body',ar:'أَسْنَان',pr:'আসনান',bn:'দাঁত',def:'চিবানোর অঙ্গ'},
+{cat:'body',ar:'لِسَان',pr:'লিসান',bn:'জিহ্বা',def:'কথা বলা ও স্বাদ গ্রহণের অঙ্গ'},
+{cat:'body',ar:'عُنُق',pr:'উনুক',bn:'গলা',def:'মাথার নিচের অংশ'},
+{cat:'body',ar:'كَتِف',pr:'কাতিফ',bn:'কাঁধ',def:'ঘাড়ের পাশের অংশ'},
+{cat:'body',ar:'يَد',pr:'ইয়াদ',bn:'হাত',def:'ধরার ও কাজের অঙ্গ'},
+{cat:'body',ar:'أَصَابِع',pr:'আসাবি',bn:'আঙুল',def:'হাতের পাঁচ ভাগ'},
+{cat:'body',ar:'صَدْر',pr:'সাদর',bn:'বুক / বক্ষ',def:'হৃৎপিণ্ড ও ফুসফুসের আবাস'},
+{cat:'body',ar:'بَطْن',pr:'বাতন',bn:'পেট',def:'হজমের অঙ্গ'},
+{cat:'body',ar:'ظَهْر',pr:'জাহর',bn:'পিঠ',def:'দেহের পশ্চাৎ অংশ'},
+{cat:'body',ar:'رِجْل',pr:'রিজল',bn:'পা',def:'চলার অঙ্গ'},
+{cat:'body',ar:'رُكْبَة',pr:'রুকবা',bn:'হাঁটু',def:'পায়ের মধ্যবর্তী সংযোগ'},
+{cat:'body',ar:'قَلْب',pr:'কালব',bn:'হৃদয়',def:'রক্ত পাম্প করার অঙ্গ'},
+{cat:'body',ar:'رِئَة',pr:'রিআ',bn:'ফুসফুস',def:'শ্বাসক্রিয়ার অঙ্গ'},
+{cat:'body',ar:'شَعْر',pr:'শাআর',bn:'চুল',def:'মাথার উপরের আঁশ'},
+{cat:'body',ar:'جِلْد',pr:'জিলদ',bn:'চামড়া / ত্বক',def:'শরীরের বাইরের আবরণ'},
+{cat:'body',ar:'عَظْم',pr:'আজম',bn:'হাড়',def:'দেহের কঙ্কাল'},
+{cat:'body',ar:'دَم',pr:'দামম',bn:'রক্ত',def:'শরীরে প্রবাহিত লাল তরল'},
+
+// ════════════════════════════════════════
+// 🍽️ খাবার ও পানীয়
+// ════════════════════════════════════════
+{cat:'food',ar:'طَعَام',pr:'তাআম',bn:'খাবার / আহার',def:'খাওয়ার উপযোগী পদার্থ'},
+{cat:'food',ar:'مَاء',pr:'মাআ',bn:'পানি',def:'প্রধান পানীয় তরল'},
+{cat:'food',ar:'خُبْز',pr:'খুবয',bn:'রুটি',def:'আটা বা ময়দার তৈরি খাবার'},
+{cat:'food',ar:'أَرُز',pr:'আরুয',bn:'চাল / ভাত',def:'ধান থেকে পাওয়া প্রধান খাদ্য'},
+{cat:'food',ar:'لَحْم',pr:'লাহম',bn:'গোশত / মাংস',def:'প্রাণীর মাংস'},
+{cat:'food',ar:'سَمَك',pr:'সামাক',bn:'মাছ',def:'জলের প্রাণী, খাবার হিসেবে'},
+{cat:'food',ar:'تَمْر',pr:'তামর',bn:'খেজুর',def:'মধ্যপ্রাচ্যের মিষ্টি ফল'},
+{cat:'food',ar:'لَبَن',pr:'লাবান',bn:'দুধ',def:'প্রাণীজ সাদা পানীয়'},
+{cat:'food',ar:'بَيْض',pr:'বাইদ',bn:'ডিম',def:'পাখির ডিম'},
+{cat:'food',ar:'عَسَل',pr:'আসাল',bn:'মধু',def:'মৌমাছির তৈরি মিষ্টি পদার্থ'},
+{cat:'food',ar:'زَيْت',pr:'যাইত',bn:'তেল',def:'রান্নায় ব্যবহৃত তরল চর্বি'},
+{cat:'food',ar:'مِلْح',pr:'মিলহ',bn:'লবণ',def:'খাবারে স্বাদ বাড়ানো পদার্থ'},
+{cat:'food',ar:'سُكَّر',pr:'সুক্কার',bn:'চিনি',def:'মিষ্টি স্বাদের দানাদার পদার্থ'},
+{cat:'food',ar:'شَاي',pr:'শায়',bn:'চা',def:'গরম পানীয়'},
+{cat:'food',ar:'قَهْوَة',pr:'কাহওয়া',bn:'কফি',def:'গাঢ় বাদামি পানীয়'},
+{cat:'food',ar:'حَلِيب',pr:'হালিব',bn:'তাজা দুধ',def:'গরু বা ছাগলের টাটকা দুধ'},
+{cat:'food',ar:'شُورَبَة',pr:'শুরাবা',bn:'স্যুপ / ঝোল',def:'তরল গরম খাবার'},
+{cat:'food',ar:'حَلْوَى',pr:'হালওয়া',bn:'মিষ্টি / হালুয়া',def:'মিষ্টি জাতীয় খাবার'},
+{cat:'food',ar:'دَقِيق',pr:'দাকিক',bn:'আটা / ময়দা',def:'রুটি বানানোর উপাদান'},
+{cat:'food',ar:'بَهَارَات',pr:'বাহারাত',bn:'মশলা',def:'রান্নায় ব্যবহৃত সুগন্ধি উপাদান'},
+
+// ════════════════════════════════════════
+// 🍎 ফলমূল
+// ════════════════════════════════════════
+{cat:'fruit',ar:'تُفَّاح',pr:'তুফফাহ',bn:'আপেল',def:'লাল বা সবুজ গোলাকার ফল'},
+{cat:'fruit',ar:'مَوْز',pr:'মাওয',bn:'কলা',def:'হলুদ বাঁকা ফল'},
+{cat:'fruit',ar:'بُرْتُقَال',pr:'বুরতুকাল',bn:'কমলা',def:'টক-মিষ্টি কমলা রঙের ফল'},
+{cat:'fruit',ar:'عِنَب',pr:'ইনাব',bn:'আঙুর',def:'গুচ্ছাকারে জন্মানো ছোট ফল'},
+{cat:'fruit',ar:'مَانْجُو',pr:'মাংগু',bn:'আম',def:'গ্রীষ্মকালীন রাজকীয় ফল'},
+{cat:'fruit',ar:'بِطِّيخ',pr:'বিত্তিখ',bn:'তরমুজ',def:'বড় সবুজ ফল, লাল ভেতর'},
+{cat:'fruit',ar:'رُمَّان',pr:'রুম্মান',bn:'ডালিম / আনার',def:'লাল দানাদার ফল'},
+{cat:'fruit',ar:'لَيْمُون',pr:'লাইমুন',bn:'লেবু',def:'টক হলুদ ফল'},
+{cat:'fruit',ar:'تِين',pr:'তিন',bn:'ডুমুর / তিন',def:'কুরআনে উল্লেখিত ফল'},
+{cat:'fruit',ar:'زَيْتُون',pr:'যাইতুন',bn:'জলপাই',def:'কুরআনে উল্লেখিত পবিত্র ফল'},
+{cat:'fruit',ar:'أَنَانَاس',pr:'আনানাস',bn:'আনারস',def:'কাঁটাযুক্ত হলুদ ফল'},
+{cat:'fruit',ar:'فَرَاوِلَة',pr:'ফারাওয়িলা',bn:'স্ট্রবেরি',def:'লাল ছোট মিষ্টি ফল'},
+{cat:'fruit',ar:'جَوَافَة',pr:'জাওয়াফা',bn:'পেয়ারা',def:'সবুজ রঙের সুগন্ধি ফল'},
+{cat:'fruit',ar:'خَوْخ',pr:'খাওখ',bn:'পিচ',def:'নরম গোলাপি-হলুদ ফল'},
+{cat:'fruit',ar:'مِشْمِش',pr:'মিশমিশ',bn:'আপ্রিকট / খুরমা',def:'ছোট কমলা রঙের ফল'},
+{cat:'fruit',ar:'كُمَّثْرَى',pr:'কুম্মাসরা',bn:'নাশপাতি',def:'সবুজ গোলাকার মিষ্টি ফল'},
+{cat:'fruit',ar:'تَمْر هِنْدِي',pr:'তামর হিন্দি',bn:'তেঁতুল',def:'টক বাদামি ফল'},
+{cat:'fruit',ar:'جَوْز الهِنْد',pr:'জাওযুল হিন্দ',bn:'নারকেল',def:'কঠিন খোলযুক্ত গ্রীষ্মকালীন ফল'},
+
+// ════════════════════════════════════════
+// 🥦 শাকসবজি
+// ════════════════════════════════════════
+{cat:'vegetable',ar:'بَطَاطَا',pr:'বাতাতা',bn:'আলু',def:'মাটির নিচে জন্মানো কন্দ'},
+{cat:'vegetable',ar:'طَمَاطِم',pr:'তামাতিম',bn:'টমেটো',def:'লাল গোলাকার সবজি'},
+{cat:'vegetable',ar:'بَصَل',pr:'বাসাল',bn:'পেঁয়াজ',def:'ঝাঁজালো স্তরযুক্ত সবজি'},
+{cat:'vegetable',ar:'ثَوْم',pr:'সাওম',bn:'রসুন',def:'তীব্র গন্ধের সাদা সবজি'},
+{cat:'vegetable',ar:'جَزَر',pr:'জাযার',bn:'গাজর',def:'কমলা রঙের মূলজাতীয় সবজি'},
+{cat:'vegetable',ar:'فُلْفُل',pr:'ফুলফুল',bn:'মরিচ',def:'ঝাল স্বাদের সবজি'},
+{cat:'vegetable',ar:'بَاذِنْجَان',pr:'বাযিনজান',bn:'বেগুন',def:'বেগুনি রঙের লম্বা সবজি'},
+{cat:'vegetable',ar:'سَبَانِخ',pr:'সাবানিখ',bn:'পালং শাক',def:'সবুজ পুষ্টিকর সবজি'},
+{cat:'vegetable',ar:'بَامِيَة',pr:'বামিয়া',bn:'ঢেঁড়স',def:'সবুজ আঙুলের আকৃতির সবজি'},
+{cat:'vegetable',ar:'قَرَع',pr:'কারা',bn:'কুমড়া',def:'বড় গোলাকার হলুদ সবজি'},
+{cat:'vegetable',ar:'كُوسَة',pr:'কুসা',bn:'চালকুমড়া / লাউ',def:'লম্বা সবুজ সবজি'},
+{cat:'vegetable',ar:'ذُرَة',pr:'যুরা',bn:'ভুট্টা',def:'হলুদ দানাদার শস্য'},
+{cat:'vegetable',ar:'خِيَار',pr:'খিয়ার',bn:'শসা',def:'সবুজ লম্বা ঠান্ডা সবজি'},
+{cat:'vegetable',ar:'خَسّ',pr:'খাস্স',bn:'লেটুস পাতা',def:'সবুজ কাঁচা সবজি পাতা'},
+{cat:'vegetable',ar:'فَاصُولِيَاء',pr:'ফাসুলিয়া',bn:'শিম / বিন',def:'লম্বা সবুজ শিম'},
+{cat:'vegetable',ar:'بَازِلَاء',pr:'বাযিলা',bn:'মটরশুঁটি',def:'গোলাকার সবুজ দানাদার সবজি'},
+{cat:'vegetable',ar:'بَقْدُونَس',pr:'বাকদুনাস',bn:'পার্সলে / ধনেপাতা',def:'সুগন্ধি সবুজ পাতা'},
+{cat:'vegetable',ar:'زَنْجَبِيل',pr:'যানজাবিল',bn:'আদা',def:'ঝাঁজালো মূলজাতীয় মশলা'},
+
+// ════════════════════════════════════════
+// 🎨 রং ও বর্ণ
+// ════════════════════════════════════════
+{cat:'color',ar:'أَحْمَر',pr:'আহমার',bn:'লাল',def:'রক্ত ও গোলাপের রঙ'},
+{cat:'color',ar:'أَزْرَق',pr:'আজরাক',bn:'নীল',def:'আকাশ ও সমুদ্রের রঙ'},
+{cat:'color',ar:'أَخْضَر',pr:'আখদার',bn:'সবুজ',def:'ঘাস ও গাছের রঙ'},
+{cat:'color',ar:'أَصْفَر',pr:'আসফার',bn:'হলুদ',def:'সূর্য ও কলার রঙ'},
+{cat:'color',ar:'أَبْيَض',pr:'আবইয়াদ',bn:'সাদা',def:'দুধ ও তুষারের রঙ'},
+{cat:'color',ar:'أَسْوَد',pr:'আসওয়াদ',bn:'কালো',def:'রাত ও কয়লার রঙ'},
+{cat:'color',ar:'بُرْتُقَالِي',pr:'বুরতুকালি',bn:'কমলা',def:'কমলা ফলের রঙ'},
+{cat:'color',ar:'بَنَفْسَجِي',pr:'বানাফসাজি',bn:'বেগুনি',def:'বেগুনের রঙ'},
+{cat:'color',ar:'وَرْدِي',pr:'ওয়ারদি',bn:'গোলাপি',def:'গোলাপ ফুলের রঙ'},
+{cat:'color',ar:'رَمَادِي',pr:'রামাদি',bn:'ধূসর',def:'ছাইয়ের রঙ'},
+{cat:'color',ar:'بُنِّي',pr:'বুন্নি',bn:'বাদামি',def:'মাটি ও কফির রঙ'},
+{cat:'color',ar:'ذَهَبِي',pr:'যাহাবি',bn:'সোনালি',def:'সোনার রঙ'},
+{cat:'color',ar:'فِضِّي',pr:'ফিদ্দি',bn:'রুপালি',def:'রুপার রঙ'},
+{cat:'color',ar:'زَيْتُونِي',pr:'যাইতুনি',bn:'জলপাই রঙ',def:'গাঢ় সবুজাভ বাদামি'},
+{cat:'color',ar:'سَمَاوِي',pr:'সামাওয়ি',bn:'আকাশি নীল',def:'হালকা নীল রঙ'},
+
+// ════════════════════════════════════════
+// 🌿 প্রকৃতি ও পরিবেশ
+// ════════════════════════════════════════
+{cat:'nature',ar:'شَمْس',pr:'শামস',bn:'সূর্য',def:'দিনের আলোর প্রধান উৎস'},
+{cat:'nature',ar:'قَمَر',pr:'কামার',bn:'চাঁদ',def:'রাতের আলো দানকারী উপগ্রহ'},
+{cat:'nature',ar:'نَجْم',pr:'নাজম',bn:'তারা',def:'আকাশের আলোকবিন্দু'},
+{cat:'nature',ar:'سَمَاء',pr:'সামাআ',bn:'আকাশ',def:'ঊর্ধ্বের বিস্তৃত স্থান'},
+{cat:'nature',ar:'أَرْض',pr:'আরদ',bn:'মাটি / পৃথিবী',def:'যেখানে আমরা বাস করি'},
+{cat:'nature',ar:'بَحْر',pr:'বাহর',bn:'সমুদ্র',def:'বিশাল লোনা জলরাশি'},
+{cat:'nature',ar:'نَهْر',pr:'নাহর',bn:'নদী',def:'প্রবহমান মিষ্টি পানির ধারা'},
+{cat:'nature',ar:'جَبَل',pr:'জাবাল',bn:'পাহাড় / পর্বত',def:'উঁচু ভূখণ্ড'},
+{cat:'nature',ar:'وَادٍ',pr:'ওয়াদি',bn:'উপত্যকা',def:'পাহাড়ের মাঝের নিচু ভূমি'},
+{cat:'nature',ar:'صَحْرَاء',pr:'সাহরা',bn:'মরুভূমি',def:'বালিময় শুষ্ক বিশাল ভূমি'},
+{cat:'nature',ar:'غَابَة',pr:'গাবা',bn:'বন / অরণ্য',def:'ঘন গাছে ভরা স্থান'},
+{cat:'nature',ar:'مَطَر',pr:'মাতার',bn:'বৃষ্টি',def:'আকাশ থেকে পড়া পানি'},
+{cat:'nature',ar:'رِيح',pr:'রিহ',bn:'বাতাস / বায়ু',def:'প্রবহমান বায়ু'},
+{cat:'nature',ar:'ثَلْج',pr:'সালজ',bn:'তুষার / বরফ',def:'জমে যাওয়া সাদা বরফ'},
+{cat:'nature',ar:'سَحَاب',pr:'সাহাব',bn:'মেঘ',def:'আকাশে ভাসমান জলকণা'},
+{cat:'nature',ar:'رَعْد',pr:'রাদ',bn:'বজ্র / গর্জন',def:'বজ্রপাতের শব্দ'},
+{cat:'nature',ar:'بَرْق',pr:'বারক',bn:'বিদ্যুৎ চমক',def:'আকাশে আলোর ঝলক'},
+{cat:'nature',ar:'فَيَضَان',pr:'ফাইয়াদান',bn:'বন্যা',def:'অতিরিক্ত পানির প্লাবন'},
+{cat:'nature',ar:'زَلْزَلَة',pr:'যালযালা',bn:'ভূমিকম্প',def:'মাটির কম্পন'},
+{cat:'nature',ar:'بُحَيْرَة',pr:'বুহাইরা',bn:'হ্রদ / দীঘি',def:'স্থির মিষ্টি পানির জলাশয়'},
+
+// ════════════════════════════════════════
+// 🦁 প্রাণী
+// ════════════════════════════════════════
+{cat:'animal',ar:'أَسَد',pr:'আসাদ',bn:'সিংহ',def:'বনের রাজা'},
+{cat:'animal',ar:'فِيل',pr:'ফিল',bn:'হাতি',def:'পৃথিবীর বৃহত্তম স্থলপ্রাণী'},
+{cat:'animal',ar:'حِصَان',pr:'হিসান',bn:'ঘোড়া',def:'দ্রুতগামী চতুষ্পদ প্রাণী'},
+{cat:'animal',ar:'بَقَرَة',pr:'বাকারা',bn:'গরু',def:'গৃহপালিত দুধ দেওয়া প্রাণী'},
+{cat:'animal',ar:'شَاة',pr:'শাআ',bn:'ছাগল',def:'ছোট গৃহপালিত প্রাণী'},
+{cat:'animal',ar:'كَلْب',pr:'কালব',bn:'কুকুর',def:'বিশ্বস্ত গৃহপালিত প্রাণী'},
+{cat:'animal',ar:'قِطَّة',pr:'কিত্তা',bn:'বিড়াল',def:'নরম লোমযুক্ত গৃহপালিত প্রাণী'},
+{cat:'animal',ar:'طَيْر',pr:'তাইর',bn:'পাখি',def:'ডানাযুক্ত আকাশচারী প্রাণী'},
+{cat:'animal',ar:'دَجَاجَة',pr:'দাজাজা',bn:'মুরগি',def:'গৃহপালিত পাখি'},
+{cat:'animal',ar:'نَمِر',pr:'নামির',bn:'চিতাবাঘ',def:'দ্রুতগামী বিন্দু বিন্দু প্রাণী'},
+{cat:'animal',ar:'ذِئْب',pr:'যিআব',bn:'নেকড়ে',def:'দলবদ্ধ বন্য প্রাণী'},
+{cat:'animal',ar:'قِرْد',pr:'কিরদ',bn:'বানর',def:'লেজযুক্ত চটপটে প্রাণী'},
+{cat:'animal',ar:'جَمَل',pr:'জামাল',bn:'উট',def:'মরুভূমির জাহাজ'},
+{cat:'animal',ar:'حِمَار',pr:'হিমার',bn:'গাধা',def:'ভার বহনকারী প্রাণী'},
+{cat:'animal',ar:'أَرْنَب',pr:'আরনাব',bn:'খরগোশ',def:'লম্বা কানের ছোট প্রাণী'},
+{cat:'animal',ar:'بَطَّة',pr:'বাত্তা',bn:'হাঁস',def:'পানিতে সাঁতারকাটা পাখি'},
+{cat:'animal',ar:'نَحْلَة',pr:'নাহলা',bn:'মৌমাছি',def:'মধু সংগ্রহকারী পতঙ্গ'},
+{cat:'animal',ar:'فَرَاشَة',pr:'ফারাশা',bn:'প্রজাপতি',def:'রঙিন ডানার পতঙ্গ'},
+{cat:'animal',ar:'سَمَكَة',pr:'সামাকা',bn:'মাছ',def:'পানিতে বাসকারী জলচর প্রাণী'},
+{cat:'animal',ar:'ضِفْدَعَة',pr:'দিফদাআ',bn:'ব্যাঙ',def:'উভচর লাফানো প্রাণী'},
+{cat:'animal',ar:'تِمْسَاح',pr:'তিমসাহ',bn:'কুমির',def:'বড় সরীসৃপ জলচর প্রাণী'},
+{cat:'animal',ar:'نَسْر',pr:'নাসর',bn:'শকুন / ঈগল',def:'বড় শিকারি পাখি'},
+
+// ════════════════════════════════════════
+// 🌸 গাছপালা ও ফুল
+// ════════════════════════════════════════
+{cat:'plant',ar:'شَجَرَة',pr:'শাজারা',bn:'গাছ',def:'কাণ্ড ও শাখাবিশিষ্ট উদ্ভিদ'},
+{cat:'plant',ar:'وَرْدَة',pr:'ওয়ারদা',bn:'গোলাপ ফুল',def:'সুগন্ধি কাঁটাযুক্ত ফুল'},
+{cat:'plant',ar:'زَهْرَة',pr:'যাহরা',bn:'ফুল',def:'গাছের রঙিন প্রজনন অংশ'},
+{cat:'plant',ar:'نَخْلَة',pr:'নাখলা',bn:'খেজুর গাছ',def:'মরুভূমির লম্বা পাতাওয়ালা গাছ'},
+{cat:'plant',ar:'عُشْب',pr:'উশব',bn:'ঘাস',def:'মাঠে জন্মানো সবুজ ছোট উদ্ভিদ'},
+{cat:'plant',ar:'بَذْرَة',pr:'বাযরা',bn:'বীজ',def:'গাছ জন্মানোর উৎস'},
+{cat:'plant',ar:'جِذْر',pr:'জিযর',bn:'শিকড়',def:'মাটির নিচে গাছের ভিত্তি'},
+{cat:'plant',ar:'وَرَقَة',pr:'ওয়ারাকা',bn:'পাতা',def:'গাছের সবুজ অংশ'},
+{cat:'plant',ar:'غُصْن',pr:'গুসন',bn:'ডাল / শাখা',def:'গাছের কাণ্ড থেকে বের হওয়া অংশ'},
+{cat:'plant',ar:'ثَمَرَة',pr:'সামারা',bn:'ফল',def:'গাছের পরিপক্ব উৎপাদন'},
+{cat:'plant',ar:'نَبَات',pr:'নাবাত',bn:'উদ্ভিদ',def:'মাটিতে জন্মানো জীব'},
+{cat:'plant',ar:'شَجَرَةُ الزَّيْتُون',pr:'শাজারাতুয যাইতুন',bn:'জলপাই গাছ',def:'কুরআনে উল্লেখিত পবিত্র গাছ'},
+{cat:'plant',ar:'قَصَب',pr:'কাসাব',bn:'বাঁশ',def:'লম্বা ফাঁকা কাণ্ডের গাছ'},
+{cat:'plant',ar:'نَعْنَاع',pr:'নানা',bn:'পুদিনা',def:'সুগন্ধি সবুজ পাতা'},
+{cat:'plant',ar:'زَعْفَرَان',pr:'যাফরান',bn:'জাফরান',def:'মূল্যবান সুগন্ধি মশলা'},
+
+// ════════════════════════════════════════
+// ⚡ ক্রিয়া / কাজ
+// ════════════════════════════════════════
+{cat:'verb',ar:'ذَهَبَ',pr:'যাহাবা',bn:'গেল / যাওয়া',def:'এক স্থান থেকে অন্য স্থানে যাওয়া'},
+{cat:'verb',ar:'جَاءَ',pr:'জাআ',bn:'এলো / আসা',def:'কাছে আসা বা উপস্থিত হওয়া'},
+{cat:'verb',ar:'أَكَلَ',pr:'আকালা',bn:'খাওয়া',def:'খাবার গ্রহণ করা'},
+{cat:'verb',ar:'شَرِبَ',pr:'শারিবা',bn:'পান করা',def:'তরল পদার্থ পান করা'},
+{cat:'verb',ar:'نَامَ',pr:'নামা',bn:'ঘুমানো',def:'বিশ্রামে থাকা'},
+{cat:'verb',ar:'قَرَأَ',pr:'কারাআ',bn:'পড়া',def:'লেখা দেখে পাঠ করা'},
+{cat:'verb',ar:'كَتَبَ',pr:'কাতাবা',bn:'লেখা',def:'কলম দিয়ে লেখা'},
+{cat:'verb',ar:'سَمِعَ',pr:'সামিআ',bn:'শোনা',def:'কানে শব্দ গ্রহণ করা'},
+{cat:'verb',ar:'رَأَى',pr:'রাআ',bn:'দেখা',def:'চোখ দিয়ে দেখা'},
+{cat:'verb',ar:'عَرَفَ',pr:'আরাফা',bn:'জানা / চেনা',def:'কিছু সম্পর্কে জ্ঞান রাখা'},
+{cat:'verb',ar:'فَهِمَ',pr:'ফাহিমা',bn:'বোঝা',def:'কিছু উপলব্ধি করা'},
+{cat:'verb',ar:'أَحَبَّ',pr:'আহাব্বা',bn:'ভালোবাসা',def:'কাউকে প্রীতি করা'},
+{cat:'verb',ar:'قَالَ',pr:'কালা',bn:'বলা',def:'কথা উচ্চারণ করা'},
+{cat:'verb',ar:'عَمِلَ',pr:'আমিলা',bn:'কাজ করা',def:'কোনো কার্য সম্পাদন করা'},
+{cat:'verb',ar:'لَعِبَ',pr:'লাআবা',bn:'খেলা',def:'আনন্দের জন্য ক্রিয়া করা'},
+{cat:'verb',ar:'جَلَسَ',pr:'জালাসা',bn:'বসা',def:'বসার ভঙ্গিতে থাকা'},
+{cat:'verb',ar:'وَقَفَ',pr:'ওয়াকাফা',bn:'দাঁড়ানো',def:'উঠে দাঁড়িয়ে থাকা'},
+{cat:'verb',ar:'فَتَحَ',pr:'ফাতাহা',bn:'খোলা',def:'বন্ধ কিছু উন্মুক্ত করা'},
+{cat:'verb',ar:'أَغْلَقَ',pr:'আগলাকা',bn:'বন্ধ করা',def:'খোলা কিছু বন্ধ করা'},
+{cat:'verb',ar:'أَخَذَ',pr:'আখাযা',bn:'নেওয়া',def:'কিছু গ্রহণ করা'},
+{cat:'verb',ar:'أَعْطَى',pr:'আতা',bn:'দেওয়া',def:'কাউকে কিছু প্রদান করা'},
+{cat:'verb',ar:'صَلَّى',pr:'সাল্লা',bn:'নামাজ পড়া',def:'আল্লাহর উদ্দেশে ইবাদত করা'},
+{cat:'verb',ar:'دَعَا',pr:'দাআ',bn:'ডাকা / দোয়া করা',def:'ডাকা বা প্রার্থনা করা'},
+{cat:'verb',ar:'رَجَعَ',pr:'রাজাআ',bn:'ফিরে আসা',def:'আবার পূর্বের স্থানে আসা'},
+
+// ════════════════════════════════════════
+// ✨ বিশেষণ
+// ════════════════════════════════════════
+{cat:'adj',ar:'كَبِير',pr:'কাবির',bn:'বড়',def:'আকারে বৃহৎ'},
+{cat:'adj',ar:'صَغِير',pr:'সাগির',bn:'ছোট',def:'আকারে ক্ষুদ্র'},
+{cat:'adj',ar:'جَدِيد',pr:'জাদিদ',bn:'নতুন',def:'সম্প্রতি তৈরি বা আনা'},
+{cat:'adj',ar:'قَدِيم',pr:'কাদিম',bn:'পুরনো',def:'অনেক আগে তৈরি'},
+{cat:'adj',ar:'جَمِيل',pr:'জামিল',bn:'সুন্দর',def:'দৃষ্টিনন্দন'},
+{cat:'adj',ar:'طَوِيل',pr:'তাওয়িল',bn:'লম্বা / দীর্ঘ',def:'উচ্চতায় বা দৈর্ঘ্যে বড়'},
+{cat:'adj',ar:'قَصِير',pr:'কাসির',bn:'খাটো',def:'উচ্চতায় কম'},
+{cat:'adj',ar:'سَرِيع',pr:'সারিআ',bn:'দ্রুত',def:'গতিতে বেশি'},
+{cat:'adj',ar:'بَطِيء',pr:'বাতি',bn:'ধীর',def:'গতিতে কম'},
+{cat:'adj',ar:'حَار',pr:'হার',bn:'গরম',def:'উচ্চ তাপমাত্রাসম্পন্ন'},
+{cat:'adj',ar:'بَارِد',pr:'বারিদ',bn:'ঠান্ডা',def:'নিম্ন তাপমাত্রাসম্পন্ন'},
+{cat:'adj',ar:'غَنِي',pr:'গানি',bn:'ধনী',def:'প্রচুর সম্পদ আছে যার'},
+{cat:'adj',ar:'فَقِير',pr:'ফাকির',bn:'গরিব',def:'সম্পদ কম যার'},
+{cat:'adj',ar:'صَحِيح',pr:'সাহিহ',bn:'সঠিক / নির্ভুল',def:'ভুল ছাড়া'},
+{cat:'adj',ar:'خَاطِئ',pr:'খাতি',bn:'ভুল',def:'সঠিক নয় এমন'},
+{cat:'adj',ar:'قَوِي',pr:'কাওয়ি',bn:'শক্তিশালী',def:'বল ও ক্ষমতাসম্পন্ন'},
+{cat:'adj',ar:'ضَعِيف',pr:'দাইফ',bn:'দুর্বল',def:'শক্তিহীন'},
+{cat:'adj',ar:'نَظِيف',pr:'নাজিফ',bn:'পরিষ্কার',def:'ময়লামুক্ত'},
+{cat:'adj',ar:'وَسِخ',pr:'ওয়াসিখ',bn:'নোংরা',def:'ময়লা বা অপরিচ্ছন্ন'},
+{cat:'adj',ar:'كَثِير',pr:'কাসির',bn:'অনেক / বেশি',def:'পরিমাণে বহু'},
+{cat:'adj',ar:'قَلِيل',pr:'কালিল',bn:'কম / অল্প',def:'পরিমাণে কম'},
+{cat:'adj',ar:'مُمْتَاز',pr:'মুমতায',bn:'চমৎকার / অসাধারণ',def:'সর্বোচ্চ মানের'},
+{cat:'adj',ar:'سَهْل',pr:'সাহল',bn:'সহজ',def:'কঠিন নয়'},
+{cat:'adj',ar:'صَعْب',pr:'সাব',bn:'কঠিন',def:'সহজ নয়'},
+
+// ════════════════════════════════════════
+// ❤️ অনুভূতি ও আবেগ
+// ════════════════════════════════════════
+{cat:'emotion',ar:'فَرَح',pr:'ফারাহ',bn:'আনন্দ / খুশি',def:'মনের সুখের অনুভূতি'},
+{cat:'emotion',ar:'حُزْن',pr:'হুযন',bn:'দুঃখ / বিষণ্নতা',def:'মনের কষ্টের অনুভূতি'},
+{cat:'emotion',ar:'خَوْف',pr:'খাওফ',bn:'ভয়',def:'বিপদের আশঙ্কায় কম্পন'},
+{cat:'emotion',ar:'غَضَب',pr:'গাদাব',bn:'রাগ / ক্রোধ',def:'অসন্তুষ্টির তীব্র অনুভূতি'},
+{cat:'emotion',ar:'حُبّ',pr:'হুব্ব',bn:'ভালোবাসা',def:'আন্তরিক প্রীতির অনুভূতি'},
+{cat:'emotion',ar:'كُرْه',pr:'কুরহ',bn:'ঘৃণা',def:'তীব্র অপছন্দের অনুভূতি'},
+{cat:'emotion',ar:'أَمَل',pr:'আমাল',bn:'আশা',def:'ভালো কিছু ঘটবে বলে প্রত্যাশা'},
+{cat:'emotion',ar:'يَأْس',pr:'ইয়াস',bn:'হতাশা / নিরাশা',def:'আশা হারিয়ে ফেলা'},
+{cat:'emotion',ar:'فَخْر',pr:'ফাখর',bn:'গর্ব',def:'নিজের বা অন্যের সাফল্যে খুশি'},
+{cat:'emotion',ar:'خَجَل',pr:'খাজাল',bn:'লজ্জা',def:'অস্বস্তি বা সংকোচের অনুভূতি'},
+{cat:'emotion',ar:'دَهْشَة',pr:'দাহশা',bn:'বিস্ময়',def:'অপ্রত্যাশিত কিছু দেখে চমক'},
+{cat:'emotion',ar:'قَلَق',pr:'কালাক',bn:'উদ্বেগ / চিন্তা',def:'অনিশ্চয়তার কারণে মনের অস্থিরতা'},
+{cat:'emotion',ar:'اطْمِئْنَان',pr:'ইতমিনান',bn:'শান্তি / স্থিরতা',def:'মনের প্রশান্তি ও স্বস্তি'},
+{cat:'emotion',ar:'غِيرَة',pr:'গিরা',bn:'ঈর্ষা / হিংসা',def:'অন্যের ভালো দেখে কষ্ট পাওয়া'},
+{cat:'emotion',ar:'شَوْق',pr:'শাওক',bn:'আগ্রহ / আকুলতা',def:'কাউকে বা কিছুকে পাওয়ার তীব্র ইচ্ছা'},
+{cat:'emotion',ar:'دُهْشَة',pr:'দুহশা',bn:'হতবাক',def:'অত্যন্ত অবাক বা স্তম্ভিত'},
+{cat:'emotion',ar:'اشْتِيَاق',pr:'ইশতিয়াক',bn:'মিস করা / আকাঙ্ক্ষা',def:'প্রিয়জনের জন্য মন কাঁদা'},
+{cat:'emotion',ar:'ضَحِكَ',pr:'দাহিকা',bn:'হাসা',def:'আনন্দে মুখ প্রসারিত করা'},
+{cat:'emotion',ar:'بَكَى',pr:'বাকা',bn:'কাঁদা',def:'চোখে পানি আসা'},
+{cat:'emotion',ar:'مَحَبَّة',pr:'মাহাব্বা',bn:'প্রেম / স্নেহ',def:'গভীর ভালোবাসা ও মমতা'},
+
+// ════════════════════════════════════════
+// ✈️ ভ্রমণ ও স্থান
+// ════════════════════════════════════════
+{cat:'travel',ar:'مَطَار',pr:'মাতার',bn:'বিমানবন্দর',def:'উড়োজাহাজ ওঠানামার স্থান'},
+{cat:'travel',ar:'فُنْدُق',pr:'ফুনদুক',bn:'হোটেল',def:'অতিথিদের থাকার জায়গা'},
+{cat:'travel',ar:'شَارِع',pr:'শারি',bn:'রাস্তা / সড়ক',def:'যানবাহন চলার পথ'},
+{cat:'travel',ar:'مَدِينَة',pr:'মাদিনা',bn:'শহর',def:'বড় জনবসতি'},
+{cat:'travel',ar:'قَرْيَة',pr:'কারিয়া',bn:'গ্রাম',def:'ছোট জনবসতি'},
+{cat:'travel',ar:'بَيْت',pr:'বাইত',bn:'বাড়ি / ঘর',def:'বাসস্থান'},
+{cat:'travel',ar:'سُوق',pr:'সুক',bn:'বাজার',def:'কেনাবেচার স্থান'},
+{cat:'travel',ar:'مُسْتَشْفَى',pr:'মুস্তাশফা',bn:'হাসপাতাল',def:'চিকিৎসার প্রতিষ্ঠান'},
+{cat:'travel',ar:'مَدْرَسَة',pr:'মাদরাসা',bn:'স্কুল / মাদ্রাসা',def:'শিক্ষাপ্রতিষ্ঠান'},
+{cat:'travel',ar:'جَوَاز سَفَر',pr:'জাওয়ায সাফার',bn:'পাসপোর্ট',def:'আন্তর্জাতিক পরিচয়পত্র'},
+{cat:'travel',ar:'تَأْشِيرَة',pr:'তাশিরা',bn:'ভিসা',def:'বিদেশে প্রবেশের অনুমতি'},
+{cat:'travel',ar:'مَحَطَّة',pr:'মাহাত্তা',bn:'স্টেশন',def:'যানবাহন থামার স্থান'},
+{cat:'travel',ar:'مَيْنَاء',pr:'মিনা',bn:'বন্দর',def:'জাহাজ থামার স্থান'},
+{cat:'travel',ar:'خَرِيطَة',pr:'খারিতা',bn:'মানচিত্র',def:'স্থানের ছবি আঁকা নির্দেশিকা'},
+{cat:'travel',ar:'مَسَافَة',pr:'মাসাফা',bn:'দূরত্ব',def:'দুই স্থানের মধ্যকার ব্যবধান'},
+{cat:'travel',ar:'سِفَارَة',pr:'সিফারা',bn:'দূতাবাস',def:'বিদেশে নিজ দেশের অফিস'},
+{cat:'travel',ar:'دَلِيل',pr:'দালিল',bn:'গাইড / পথপ্রদর্শক',def:'পথ দেখিয়ে দেওয়া ব্যক্তি'},
+{cat:'travel',ar:'عُنْوَان',pr:'উনওয়ান',bn:'ঠিকানা',def:'বাড়ি বা অফিসের পরিচয়'},
+
+// ════════════════════════════════════════
+// 🚌 পরিবহন
+// ════════════════════════════════════════
+{cat:'transport',ar:'طَائِرَة',pr:'তাইরা',bn:'বিমান / উড়োজাহাজ',def:'আকাশ পথে যাতায়াতের যান'},
+{cat:'transport',ar:'سَيَّارَة',pr:'সায়্যারা',bn:'গাড়ি',def:'মোটরচালিত যান'},
+{cat:'transport',ar:'قِطَار',pr:'কিতার',bn:'ট্রেন',def:'রেলপথে চলা বাহন'},
+{cat:'transport',ar:'حَافِلَة',pr:'হাফিলা',bn:'বাস',def:'যাত্রীবাহী বড় গাড়ি'},
+{cat:'transport',ar:'تَاكْسِي',pr:'তাকসি',bn:'ট্যাক্সি',def:'ভাড়ায় চলা গাড়ি'},
+{cat:'transport',ar:'سَفِينَة',pr:'সাফিনা',bn:'জাহাজ',def:'সমুদ্রে চলা বড় নৌযান'},
+{cat:'transport',ar:'قَارِب',pr:'কারিব',bn:'নৌকা',def:'ছোট জলযান'},
+{cat:'transport',ar:'دَرَّاجَة',pr:'দাররাজা',bn:'সাইকেল',def:'দুই চাকার মানববাহিত যান'},
+{cat:'transport',ar:'دَرَّاجَة نَارِيَّة',pr:'দাররাজা নারিয়া',bn:'মোটরসাইকেল',def:'দুই চাকার মোটরচালিত যান'},
+{cat:'transport',ar:'جِسْر',pr:'জিসর',bn:'সেতু / ব্রিজ',def:'নদী বা খালের উপর পার হওয়ার কাঠামো'},
+{cat:'transport',ar:'طَرِيق',pr:'তারিক',bn:'পথ / রাস্তা',def:'চলাচলের জন্য তৈরি পথ'},
+{cat:'transport',ar:'مَرْسَى',pr:'মারসা',bn:'বন্দর / ঘাট',def:'নৌযান বাঁধার স্থান'},
+{cat:'transport',ar:'مَحَطَّة وَقُود',pr:'মাহাত্তাত ওয়াকুদ',bn:'পেট্রোল স্টেশন',def:'গাড়িতে জ্বালানি দেওয়ার স্থান'},
+
+// ════════════════════════════════════════
+// 🏠 গৃহ ও আসবাবপত্র
+// ════════════════════════════════════════
+{cat:'house',ar:'غُرْفَة',pr:'গুরফা',bn:'ঘর / কক্ষ',def:'বাড়ির একটি বিভাগ'},
+{cat:'house',ar:'مَطْبَخ',pr:'মাতবাখ',bn:'রান্নাঘর',def:'রান্না করার স্থান'},
+{cat:'house',ar:'حَمَّام',pr:'হাম্মাম',bn:'বাথরুম',def:'গোসল করার ঘর'},
+{cat:'house',ar:'بَاب',pr:'বাব',bn:'দরজা',def:'ঘরে প্রবেশের পথ'},
+{cat:'house',ar:'نَافِذَة',pr:'নাফিযা',bn:'জানালা',def:'আলো-বাতাস প্রবেশের পথ'},
+{cat:'house',ar:'سَرِير',pr:'সারির',bn:'বিছানা',def:'ঘুমানোর আসবাব'},
+{cat:'house',ar:'كُرْسِي',pr:'কুরসি',bn:'চেয়ার',def:'বসার আসবাব'},
+{cat:'house',ar:'طَاوِلَة',pr:'তাওয়িলা',bn:'টেবিল',def:'কাজ বা খাওয়ার আসবাব'},
+{cat:'house',ar:'مِصْبَاح',pr:'মিসবাহ',bn:'বাতি / আলো',def:'ঘর আলোকিত করার যন্ত্র'},
+{cat:'house',ar:'ثَلَّاجَة',pr:'সাল্লাজা',bn:'ফ্রিজ',def:'খাবার ঠান্ডা রাখার যন্ত্র'},
+{cat:'house',ar:'مِرْوَحَة',pr:'মিরওয়াহা',bn:'পাখা / ফ্যান',def:'বাতাস দেওয়ার যন্ত্র'},
+{cat:'house',ar:'تِلْفِزْيُون',pr:'তিলফিযিয়ুন',bn:'টেলিভিশন',def:'দৃশ্য দেখার ইলেক্ট্রনিক যন্ত্র'},
+{cat:'house',ar:'سَجَّادَة',pr:'সাজ্জাদা',bn:'কার্পেট / জায়নামাজ',def:'মেঝেতে বিছানো কাপড়'},
+{cat:'house',ar:'مِرْآة',pr:'মিরআ',bn:'আয়না',def:'নিজেকে দেখার কাচ'},
+{cat:'house',ar:'خِزَانَة',pr:'খিযানা',bn:'আলমারি',def:'কাপড় রাখার আসবাব'},
+{cat:'house',ar:'مِفْتَاح',pr:'মিফতাহ',bn:'চাবি',def:'দরজা খোলার ধাতু'},
+{cat:'house',ar:'سُلَّم',pr:'সুল্লাম',bn:'সিঁড়ি',def:'উপরে উঠার ধাপ'},
+{cat:'house',ar:'سَقْف',pr:'সাকফ',bn:'ছাদ',def:'ঘরের উপরের আচ্ছাদন'},
+
+// ════════════════════════════════════════
+// 👗 পোশাক ও পরিধান
+// ════════════════════════════════════════
+{cat:'clothes',ar:'قَمِيص',pr:'কামিস',bn:'জামা / শার্ট',def:'গায়ের উপরের পোশাক'},
+{cat:'clothes',ar:'بَنْطَلُون',pr:'বানতালুন',bn:'প্যান্ট / পায়জামা',def:'পায়ের নিচের পোশাক'},
+{cat:'clothes',ar:'ثَوْب',pr:'সাওব',bn:'আরবি পোশাক / জুব্বা',def:'দীর্ঘ ঢিলা পোশাক'},
+{cat:'clothes',ar:'عَبَاءَة',pr:'আবায়া',bn:'আবায়া',def:'নারীদের ঢিলা কালো পোশাক'},
+{cat:'clothes',ar:'حِجَاب',pr:'হিজাব',bn:'হিজাব',def:'মুসলিম নারীর মাথা ঢাকার পোশাক'},
+{cat:'clothes',ar:'نِقَاب',pr:'নিকাব',bn:'নিকাব',def:'মুখ ঢাকার পোশাক'},
+{cat:'clothes',ar:'عِمَامَة',pr:'ইমামা',bn:'পাগড়ি',def:'মাথায় পেঁচানো কাপড়'},
+{cat:'clothes',ar:'حِذَاء',pr:'হিযা',bn:'জুতা',def:'পায়ে পরার আবরণ'},
+{cat:'clothes',ar:'جَوْرَب',pr:'জাওরাব',bn:'মোজা',def:'পায়ের ঢাকনা'},
+{cat:'clothes',ar:'مِعْطَف',pr:'মিআতাফ',bn:'কোট / জ্যাকেট',def:'ঠান্ডায় পরার বাইরের পোশাক'},
+{cat:'clothes',ar:'قُبَّعَة',pr:'কুব্বাআ',bn:'টুপি',def:'মাথায় পরার ঢাকনা'},
+{cat:'clothes',ar:'حِزَام',pr:'হিযাম',bn:'বেল্ট',def:'কোমরে বাঁধার ফিতা'},
+{cat:'clothes',ar:'قُفَّاز',pr:'কুফফায',bn:'হাতমোজা',def:'হাত ঢাকার পোশাক'},
+{cat:'clothes',ar:'مَلَابِس',pr:'মালাবিস',bn:'পোশাক-পরিচ্ছদ',def:'পরিধানযোগ্য কাপড়চোপড়'},
+{cat:'clothes',ar:'فُسْتَان',pr:'ফুসতান',bn:'পোশাক / গাউন',def:'নারীদের লম্বা পোশাক'},
+
+// ════════════════════════════════════════
+// 📚 শিক্ষা
+// ════════════════════════════════════════
+{cat:'education',ar:'كِتَاب',pr:'কিতাব',bn:'বই',def:'পাঠ্যপুস্তক বা যেকোনো বই'},
+{cat:'education',ar:'قَلَم',pr:'কালাম',bn:'কলম',def:'লেখার যন্ত্র'},
+{cat:'education',ar:'دَفْتَر',pr:'দাফতার',bn:'খাতা / নোটবুক',def:'লেখার কাগজের সংগ্রহ'},
+{cat:'education',ar:'مَكْتَبَة',pr:'মাকতাবা',bn:'লাইব্রেরি / পাঠাগার',def:'বই সংগ্রহের স্থান'},
+{cat:'education',ar:'أُسْتَاذ',pr:'উস্তাদ',bn:'শিক্ষক / ওস্তাদ',def:'বিদ্যাদানকারী ব্যক্তি'},
+{cat:'education',ar:'طَالِب',pr:'তালিব',bn:'ছাত্র',def:'বিদ্যার্থী'},
+{cat:'education',ar:'فَصْل',pr:'ফাসল',bn:'ক্লাসরুম',def:'পড়ার ঘর'},
+{cat:'education',ar:'لَوْح',pr:'লাওহ',bn:'বোর্ড',def:'শিক্ষক যেখানে লেখেন'},
+{cat:'education',ar:'امتحان',pr:'ইমতিহান',bn:'পরীক্ষা',def:'জ্ঞানের মূল্যায়ন'},
+{cat:'education',ar:'دَرْس',pr:'দারস',bn:'পাঠ / সবক',def:'একটি শিক্ষার বিষয়'},
+{cat:'education',ar:'جَامِعَة',pr:'জামিআ',bn:'বিশ্ববিদ্যালয়',def:'উচ্চশিক্ষার প্রতিষ্ঠান'},
+{cat:'education',ar:'عِلْم',pr:'ইলম',bn:'জ্ঞান / ইলম',def:'বিদ্যা ও তথ্য'},
+{cat:'education',ar:'لُغَة',pr:'লুগা',bn:'ভাষা',def:'যোগাযোগের মাধ্যম'},
+{cat:'education',ar:'شَهَادَة',pr:'শাহাদা',bn:'সার্টিফিকেট / সনদ',def:'শিক্ষাগত যোগ্যতার প্রমাণ'},
+{cat:'education',ar:'مَدَارِس',pr:'মাদারিস',bn:'স্কুলসমূহ',def:'মাদরাসা বা স্কুলের বহুবচন'},
+{cat:'education',ar:'تَعَلَّمَ',pr:'তাআল্লামা',bn:'শেখা / পড়া',def:'জ্ঞান অর্জন করা'},
+{cat:'education',ar:'نَجَاح',pr:'নাজাহ',bn:'সাফল্য / পাস',def:'পরীক্ষায় উত্তীর্ণ হওয়া'},
+{cat:'education',ar:'رُسُوب',pr:'রুসুব',bn:'ফেল / অকৃতকার্য',def:'পরীক্ষায় উত্তীর্ণ না হওয়া'},
+
+// ════════════════════════════════════════
+// 💼 পেশা ও কর্ম
+// ════════════════════════════════════════
+{cat:'profession',ar:'طَبِيب',pr:'তাবিব',bn:'ডাক্তার',def:'চিকিৎসা বিশেষজ্ঞ'},
+{cat:'profession',ar:'مُهَنْدِس',pr:'মুহান্দিস',bn:'ইঞ্জিনিয়ার',def:'প্রকৌশলী'},
+{cat:'profession',ar:'مُعَلِّم',pr:'মুআল্লিম',bn:'শিক্ষক',def:'পাঠদানকারী'},
+{cat:'profession',ar:'مُحَامٍ',pr:'মুহামি',bn:'আইনজীবী',def:'আইনি পরামর্শদাতা'},
+{cat:'profession',ar:'تَاجِر',pr:'তাজির',bn:'ব্যবসায়ী',def:'ক্রয়-বিক্রয়কারী'},
+{cat:'profession',ar:'مُزَارِع',pr:'মুযারি',bn:'কৃষক',def:'মাটিতে চাষকারী'},
+{cat:'profession',ar:'شُرْطِي',pr:'শুরতি',bn:'পুলিশ',def:'আইনশৃঙ্খলা রক্ষাকারী'},
+{cat:'profession',ar:'طَيَّار',pr:'তায়্যার',bn:'পাইলট',def:'বিমান চালক'},
+{cat:'profession',ar:'طَبَّاخ',pr:'তাব্বাখ',bn:'রাঁধুনি / বাবুর্চি',def:'রান্না বিশেষজ্ঞ'},
+{cat:'profession',ar:'صَيَّاد',pr:'সায়্যাদ',bn:'জেলে',def:'মাছ ধরার পেশাদার'},
+{cat:'profession',ar:'نَجَّار',pr:'নাজ্জার',bn:'কাঠমিস্ত্রি',def:'কাঠ দিয়ে কাজ করার পেশাদার'},
+{cat:'profession',ar:'صَحَفِي',pr:'সাহাফি',bn:'সাংবাদিক',def:'সংবাদ সংগ্রহ ও প্রচারকারী'},
+{cat:'profession',ar:'مُمَرِّض',pr:'মুমাররিদ',bn:'নার্স',def:'রোগীর সেবাকারী'},
+{cat:'profession',ar:'مَحَاسِب',pr:'মুহাসিব',bn:'হিসাবরক্ষক',def:'আর্থিক হিসাব পরিচালনাকারী'},
+{cat:'profession',ar:'مَهَنَة',pr:'মাহানা',bn:'পেশা',def:'জীবিকার কাজ'},
+{cat:'profession',ar:'مَكْتَب',pr:'মাকতাব',bn:'অফিস',def:'কাজের স্থান'},
+{cat:'profession',ar:'رَاتِب',pr:'রাতিব',bn:'বেতন',def:'কাজের বিনিময়ে প্রাপ্ত অর্থ'},
+
+// ════════════════════════════════════════
+// 🏥 স্বাস্থ্য ও চিকিৎসা
+// ════════════════════════════════════════
+{cat:'health',ar:'مَرَض',pr:'মারাদ',bn:'রোগ',def:'শারীরিক অসুস্থতা'},
+{cat:'health',ar:'دَوَاء',pr:'দাওয়া',bn:'ওষুধ',def:'রোগ নিরাময়ের পদার্থ'},
+{cat:'health',ar:'عَمَلِيَّة',pr:'আমালিয়া',bn:'অপারেশন',def:'শরীরের কাটাছেঁড়া চিকিৎসা'},
+{cat:'health',ar:'وَجَع',pr:'ওয়াজা',bn:'ব্যথা',def:'শরীরে কষ্টের অনুভূতি'},
+{cat:'health',ar:'حُمَّى',pr:'হুম্মা',bn:'জ্বর',def:'শরীরের তাপমাত্রা বৃদ্ধি'},
+{cat:'health',ar:'سُعَال',pr:'সুআল',bn:'কাশি',def:'শ্বাসনালির প্রতিক্রিয়া'},
+{cat:'health',ar:'صُدَاع',pr:'সুদা',bn:'মাথাব্যথা',def:'মাথায় কষ্টের অনুভূতি'},
+{cat:'health',ar:'زُكَام',pr:'যুকাম',bn:'সর্দি',def:'নাক দিয়ে পানি পড়া'},
+{cat:'health',ar:'صَيْدَلِيَّة',pr:'সাইদালিয়া',bn:'ফার্মেসি / ওষুধের দোকান',def:'ওষুধ বিক্রির স্থান'},
+{cat:'health',ar:'لِقَاح',pr:'লিকাহ',bn:'টিকা',def:'রোগ প্রতিরোধের ইনজেকশন'},
+{cat:'health',ar:'حِمْيَة',pr:'হিমিয়া',bn:'ডায়েট / পথ্য',def:'নিয়ন্ত্রিত খাদ্যাভ্যাস'},
+{cat:'health',ar:'صِحَّة',pr:'সিহহা',bn:'সুস্বাস্থ্য',def:'শারীরিক ও মানসিক সুস্থতা'},
+{cat:'health',ar:'عِلَاج',pr:'ইলাজ',bn:'চিকিৎসা',def:'রোগ সারানোর পদ্ধতি'},
+{cat:'health',ar:'جُرْح',pr:'জুরহ',bn:'আঘাত / ক্ষত',def:'শরীরে কাটা বা আঘাতের চিহ্ন'},
+{cat:'health',ar:'ضَغْطُ الدَّم',pr:'দাগতুদ দাম',bn:'রক্তচাপ',def:'রক্ত প্রবাহের চাপ'},
+
+// ════════════════════════════════════════
+// ⚽ খেলাধুলা
+// ════════════════════════════════════════
+{cat:'sport',ar:'كُرَة القَدَم',pr:'কুরাতুল কাদাম',bn:'ফুটবল',def:'বিশ্বের সবচেয়ে জনপ্রিয় খেলা'},
+{cat:'sport',ar:'كُرَة السَّلَّة',pr:'কুরাতুস সাল্লা',bn:'বাস্কেটবল',def:'ঝুড়িতে বল ফেলার খেলা'},
+{cat:'sport',ar:'سِبَاحَة',pr:'সিবাহা',bn:'সাঁতার',def:'পানিতে ভেসে চলার ক্রিয়া'},
+{cat:'sport',ar:'جَرْي',pr:'জারি',bn:'দৌড়',def:'দ্রুতগতিতে ছোটা'},
+{cat:'sport',ar:'مُلَاكَمَة',pr:'মুলাকামা',bn:'বক্সিং',def:'মুষ্টিযুদ্ধ'},
+{cat:'sport',ar:'تَنِس',pr:'তানিস',bn:'টেনিস',def:'র‍্যাকেট দিয়ে বল খেলা'},
+{cat:'sport',ar:'رِيَاضَة',pr:'রিয়াদা',bn:'ব্যায়াম / খেলাধুলা',def:'শারীরিক সক্রিয়তা'},
+{cat:'sport',ar:'مُسَابَقَة',pr:'মুসাবাকা',bn:'প্রতিযোগিতা',def:'জয়ের জন্য প্রতিদ্বন্দ্বিতা'},
+{cat:'sport',ar:'بُطُولَة',pr:'বুতুলা',bn:'চ্যাম্পিয়নশিপ',def:'প্রতিযোগিতার শিরোপা'},
+{cat:'sport',ar:'فَرِيق',pr:'ফারিক',bn:'দল / টিম',def:'একসাথে খেলা দল'},
+{cat:'sport',ar:'مَلْعَب',pr:'মালআব',bn:'মাঠ / স্টেডিয়াম',def:'খেলার নির্ধারিত স্থান'},
+{cat:'sport',ar:'كُرَة الطَّائِرَة',pr:'কুরাতুত তাইরা',bn:'ভলিবল',def:'জাল ছাড়িয়ে বল পাঠানোর খেলা'},
+{cat:'sport',ar:'بَطَل',pr:'বাতাল',bn:'চ্যাম্পিয়ন / বীর',def:'বিজয়ী খেলোয়াড়'},
+
+// ════════════════════════════════════════
+// 💻 প্রযুক্তি
+// ════════════════════════════════════════
+{cat:'tech',ar:'حَاسُوب',pr:'হাসুব',bn:'কম্পিউটার',def:'ইলেক্ট্রনিক গণনাযন্ত্র'},
+{cat:'tech',ar:'هَاتِف',pr:'হাতিফ',bn:'ফোন',def:'দূরের কথা বলার যন্ত্র'},
+{cat:'tech',ar:'إِنْتَرْنِت',pr:'ইনতারনিত',bn:'ইন্টারনেট',def:'বৈশ্বিক তথ্য নেটওয়ার্ক'},
+{cat:'tech',ar:'بَرِيدٌ إِلِكْتْرُونِي',pr:'বারিদ ইলিকত্রুনি',bn:'ইমেইল',def:'ইলেক্ট্রনিক চিঠি'},
+{cat:'tech',ar:'تَطْبِيق',pr:'তাতবিক',bn:'অ্যাপ',def:'মোবাইলের সফটওয়্যার'},
+{cat:'tech',ar:'شَاشَة',pr:'শাশা',bn:'স্ক্রিন / পর্দা',def:'তথ্য দেখার কাচের পৃষ্ঠ'},
+{cat:'tech',ar:'كَامِيرَا',pr:'কামিরা',bn:'ক্যামেরা',def:'ছবি তোলার যন্ত্র'},
+{cat:'tech',ar:'طَابِعَة',pr:'তাবিআ',bn:'প্রিন্টার',def:'কাগজে ছাপানোর যন্ত্র'},
+{cat:'tech',ar:'ذَاكِرَة',pr:'যাকিরা',bn:'মেমোরি',def:'তথ্য সংরক্ষণের স্থান'},
+{cat:'tech',ar:'شَبَكَة',pr:'শাবাকা',bn:'নেটওয়ার্ক',def:'সংযুক্ত কম্পিউটারের জাল'},
+{cat:'tech',ar:'كَلِمَةُ السِّر',pr:'কালিমাতুস সির',bn:'পাসওয়ার্ড',def:'নিরাপত্তামূলক গোপন কোড'},
+{cat:'tech',ar:'رُوبُوت',pr:'রুবুত',bn:'রোবট',def:'যন্ত্রমানব'},
+{cat:'tech',ar:'ذَكَاء اصْطِنَاعِي',pr:'যাকাউল ইসতিনাই',bn:'কৃত্রিম বুদ্ধিমত্তা',def:'AI - মেশিনের বুদ্ধিমত্তা'},
+
+// ════════════════════════════════════════
+// 💰 অর্থ ও বাণিজ্য
+// ════════════════════════════════════════
+{cat:'money',ar:'مَال',pr:'মাল',bn:'টাকা / অর্থ',def:'বিনিময়ের মাধ্যম'},
+{cat:'money',ar:'مَحْفَظَة',pr:'মাহফাযা',bn:'মানিব্যাগ',def:'টাকা রাখার পার্স'},
+{cat:'money',ar:'بَنْك',pr:'বাংক',bn:'ব্যাংক',def:'আর্থিক প্রতিষ্ঠান'},
+{cat:'money',ar:'سِعْر',pr:'সিআর',bn:'দাম / মূল্য',def:'কিছু কিনতে প্রয়োজনীয় অর্থ'},
+{cat:'money',ar:'بَيْع',pr:'বাই',bn:'বিক্রয়',def:'অর্থের বিনিময়ে দেওয়া'},
+{cat:'money',ar:'شِرَاء',pr:'শিরা',bn:'ক্রয়',def:'অর্থের বিনিময়ে নেওয়া'},
+{cat:'money',ar:'رِبْح',pr:'রিবহ',bn:'লাভ',def:'খরচের চেয়ে বেশি উপার্জন'},
+{cat:'money',ar:'خَسَارَة',pr:'খাসারা',bn:'ক্ষতি / লোকসান',def:'খরচের চেয়ে কম উপার্জন'},
+{cat:'money',ar:'عُمْلَة',pr:'উমলা',bn:'মুদ্রা / কারেন্সি',def:'দেশের আর্থিক একক'},
+{cat:'money',ar:'رِيَال',pr:'রিয়াল',bn:'রিয়াল',def:'সৌদি আরবের মুদ্রা'},
+{cat:'money',ar:'دِرْهَم',pr:'দিরহাম',bn:'দিরহাম',def:'UAE ও মরক্কোর মুদ্রা'},
+{cat:'money',ar:'ضَرِيبَة',pr:'দারিবা',bn:'কর / ট্যাক্স',def:'সরকারকে প্রদত্ত বাধ্যতামূলক অর্থ'},
+{cat:'money',ar:'فَاتُورَة',pr:'ফাতুরা',bn:'বিল / চালান',def:'কেনার পরের হিসাব কাগজ'},
+
+// ════════════════════════════════════════
+// 🌍 দেশ ও জাতীয়তা
+// ════════════════════════════════════════
+{cat:'country',ar:'بَنْغَلَادِيش',pr:'বাংলাদিশ',bn:'বাংলাদেশ',def:'দক্ষিণ এশিয়ার মুসলিম দেশ'},
+{cat:'country',ar:'الهِنْد',pr:'আল-হিন্দ',bn:'ভারত',def:'বাংলাদেশের প্রতিবেশী দেশ'},
+{cat:'country',ar:'السُّعُودِيَّة',pr:'আস-সাউদিয়া',bn:'সৌদি আরব',def:'ইসলামের জন্মভূমি'},
+{cat:'country',ar:'مِصْر',pr:'মিসর',bn:'মিশর',def:'আফ্রিকার প্রাচীন সভ্যতার দেশ'},
+{cat:'country',ar:'تُرْكِيَا',pr:'তুরকিয়া',bn:'তুরস্ক',def:'ইউরোপ-এশিয়ার সংযোগস্থলের দেশ'},
+{cat:'country',ar:'بَاكِسْتَان',pr:'বাকিস্তান',bn:'পাকিস্তান',def:'দক্ষিণ এশিয়ার মুসলিম দেশ'},
+{cat:'country',ar:'إِنْدُونِيسِيَا',pr:'ইনদুনিসিয়া',bn:'ইন্দোনেশিয়া',def:'বিশ্বের বৃহত্তম মুসলিম দেশ'},
+{cat:'country',ar:'مَالِيزِيَا',pr:'মালিযিয়া',bn:'মালয়েশিয়া',def:'দক্ষিণ-পূর্ব এশিয়ার মুসলিম দেশ'},
+{cat:'country',ar:'اليَابَان',pr:'আল-ইয়াবান',bn:'জাপান',def:'পূর্ব এশিয়ার প্রযুক্তি উন্নত দেশ'},
+{cat:'country',ar:'أَمْرِيكَا',pr:'আমরিকা',bn:'আমেরিকা',def:'বিশ্বের বৃহত্তম অর্থনীতির দেশ'},
+{cat:'country',ar:'بِرِيطَانِيَا',pr:'বিরিতানিয়া',bn:'যুক্তরাজ্য / ব্রিটেন',def:'ইউরোপের দ্বীপ রাষ্ট্র'},
+{cat:'country',ar:'الصِّين',pr:'আস-সিন',bn:'চীন',def:'বিশ্বের সবচেয়ে বেশি জনসংখ্যার দেশ'},
+{cat:'country',ar:'إِيرَان',pr:'ইরান',bn:'ইরান',def:'মধ্যপ্রাচ্যের বৃহৎ দেশ'},
+{cat:'country',ar:'مَكَّة المُكَرَّمَة',pr:'মাক্কাতুল মুকাররামা',bn:'মক্কা',def:'ইসলামের পবিত্রতম নগরী'},
+{cat:'country',ar:'المَدِينَة المُنَوَّرَة',pr:'আল-মাদিনাতুল মুনাওয়ারা',bn:'মদিনা',def:'ইসলামের দ্বিতীয় পবিত্র নগরী'},
+
+// ════════════════════════════════════════
+// 🗺️ ভূগোল
+// ════════════════════════════════════════
+{cat:'geography',ar:'قَارَّة',pr:'কার্‌রা',bn:'মহাদেশ',def:'বিশাল ভূখণ্ড'},
+{cat:'geography',ar:'مُحِيط',pr:'মুহিত',bn:'মহাসাগর',def:'বিশাল লোনা জলরাশি'},
+{cat:'geography',ar:'صَحْرَاء',pr:'সাহরা',bn:'মরুভূমি',def:'বিশাল বালিময় শুষ্ক ভূমি'},
+{cat:'geography',ar:'غَابَة',pr:'গাবা',bn:'বন / অরণ্য',def:'ঘন গাছের সমষ্টি'},
+{cat:'geography',ar:'جَزِيرَة',pr:'জাযিরা',bn:'দ্বীপ',def:'চারদিকে পানিবেষ্টিত ভূমি'},
+{cat:'geography',ar:'شِبْهُ جَزِيرَة',pr:'শিবহু জাযিরা',bn:'উপদ্বীপ',def:'তিন দিকে পানি ও এক দিকে স্থল'},
+{cat:'geography',ar:'قُطْب',pr:'কুতব',bn:'মেরু',def:'পৃথিবীর উত্তর বা দক্ষিণ প্রান্ত'},
+{cat:'geography',ar:'خَلِيج',pr:'খালিজ',bn:'উপসাগর',def:'সমুদ্রের স্থলঘেরা অংশ'},
+{cat:'geography',ar:'وَادٍ',pr:'ওয়াদি',bn:'উপত্যকা',def:'পাহাড়ের মধ্যবর্তী নিচু ভূমি'},
+{cat:'geography',ar:'سَهْل',pr:'সাহল',bn:'সমতলভূমি / মাঠ',def:'সমান বিস্তৃত ভূমি'},
+{cat:'geography',ar:'هَضْبَة',pr:'হাদবা',bn:'মালভূমি',def:'উঁচু সমতল ভূমি'},
+{cat:'geography',ar:'نَهْرٌ كَبِير',pr:'নাহরুন কাবির',bn:'মহানদী',def:'বড় নদী'},
+{cat:'geography',ar:'قِمَّة',pr:'কিম্মা',bn:'পর্বতচূড়া',def:'পাহাড়ের সর্বোচ্চ বিন্দু'},
+
+// ════════════════════════════════════════
+// ⏰ সময় ও কাল
+// ════════════════════════════════════════
+{cat:'time',ar:'يَوْم',pr:'ইয়াওম',bn:'দিন',def:'২৪ ঘণ্টার সময়কাল'},
+{cat:'time',ar:'لَيْل',pr:'লাইল',bn:'রাত',def:'সূর্যাস্তের পর থেকে ভোর পর্যন্ত'},
+{cat:'time',ar:'صَبَاح',pr:'সাবাহ',bn:'সকাল',def:'দিনের শুরু'},
+{cat:'time',ar:'ظُهْر',pr:'জুহর',bn:'দুপুর',def:'দিনের মধ্যভাগ'},
+{cat:'time',ar:'عَصْر',pr:'আসর',bn:'বিকেল',def:'দুপুরের পর থেকে সন্ধ্যার আগে'},
+{cat:'time',ar:'مَسَاء',pr:'মাসা',bn:'সন্ধ্যা',def:'দিনের শেষভাগ'},
+{cat:'time',ar:'أُسْبُوع',pr:'উসবুউ',bn:'সপ্তাহ',def:'সাতটি দিনের সমষ্টি'},
+{cat:'time',ar:'شَهْر',pr:'শাহর',bn:'মাস',def:'প্রায় ৩০ দিনের সময়'},
+{cat:'time',ar:'سَنَة',pr:'সানা',bn:'বছর',def:'১২ মাসের সময়কাল'},
+{cat:'time',ar:'الْيَوْم',pr:'আল-ইয়াওম',bn:'আজ',def:'বর্তমান দিন'},
+{cat:'time',ar:'غَد',pr:'গাদ',bn:'আগামীকাল',def:'পরের দিন'},
+{cat:'time',ar:'أَمْس',pr:'আমস',bn:'গতকাল',def:'আগের দিন'},
+{cat:'time',ar:'سَاعَة',pr:'সাআ',bn:'ঘড়ি / ঘণ্টা',def:'৬০ মিনিটের সময় বা সময় পরিমাপক'},
+{cat:'time',ar:'دَقِيقَة',pr:'দাকিকা',bn:'মিনিট',def:'৬০ সেকেন্ডের সময়'},
+{cat:'time',ar:'ثَانِيَة',pr:'সানিয়া',bn:'সেকেন্ড',def:'সময়ের ক্ষুদ্রতম একক'},
+{cat:'time',ar:'قَرْن',pr:'কারন',bn:'শতাব্দী',def:'একশো বছরের সময়কাল'},
+
+// ════════════════════════════════════════
+// 📅 সপ্তাহের দিন
+// ════════════════════════════════════════
+{cat:'days',ar:'الأَحَد',pr:'আল-আহাদ',bn:'রবিবার',def:'সপ্তাহের প্রথম দিন'},
+{cat:'days',ar:'الِاثْنَيْن',pr:'আল-ইসনাইন',bn:'সোমবার',def:'সপ্তাহের দ্বিতীয় দিন'},
+{cat:'days',ar:'الثُّلَاثَاء',pr:'আস-সুলাসা',bn:'মঙ্গলবার',def:'সপ্তাহের তৃতীয় দিন'},
+{cat:'days',ar:'الأَرْبِعَاء',pr:'আল-আরবিআ',bn:'বুধবার',def:'সপ্তাহের চতুর্থ দিন'},
+{cat:'days',ar:'الخَمِيس',pr:'আল-খামিস',bn:'বৃহস্পতিবার',def:'সপ্তাহের পঞ্চম দিন'},
+{cat:'days',ar:'الجُمُعَة',pr:'আল-জুমুআ',bn:'শুক্রবার',def:'মুসলিমদের পবিত্র সাপ্তাহিক দিন'},
+{cat:'days',ar:'السَّبْت',pr:'আস-সাবত',bn:'শনিবার',def:'সপ্তাহের শেষ দিন'},
+
+// ════════════════════════════════════════
+// 🌙 হিজরি মাস
+// ════════════════════════════════════════
+{cat:'months',ar:'مُحَرَّم',pr:'মুহাররম',bn:'মুহাররম (১ম মাস)',def:'ইসলামি নববর্ষের মাস'},
+{cat:'months',ar:'صَفَر',pr:'সাফার',bn:'সফর (২য় মাস)',def:'হিজরি ক্যালেন্ডারের দ্বিতীয় মাস'},
+{cat:'months',ar:'رَبِيعُ الأَوَّل',pr:'রাবিউল আউয়াল',bn:'রবিউল আউয়াল (৩য়)',def:'নবী (সা.)-এর জন্ম ও মৃত্যুর মাস'},
+{cat:'months',ar:'رَبِيعُ الثَّانِي',pr:'রাবিউস সানি',bn:'রবিউস সানি (৪র্থ)',def:'হিজরি চতুর্থ মাস'},
+{cat:'months',ar:'جُمَادَى الأُولَى',pr:'জুমাদাল উলা',bn:'জুমাদাল উলা (৫ম)',def:'হিজরি পঞ্চম মাস'},
+{cat:'months',ar:'جُمَادَى الآخِرَة',pr:'জুমাদাল আখিরা',bn:'জুমাদাল আখিরা (৬ষ্ঠ)',def:'হিজরি ষষ্ঠ মাস'},
+{cat:'months',ar:'رَجَب',pr:'রজব',bn:'রজব (৭ম মাস)',def:'পবিত্র মাস, মিরাজের মাস'},
+{cat:'months',ar:'شَعْبَان',pr:'শাবান',bn:'শাবান (৮ম মাস)',def:'রমজানের আগের মাস'},
+{cat:'months',ar:'رَمَضَان',pr:'রমদান',bn:'রমজান (৯ম মাস)',def:'সিয়াম সাধনার পবিত্র মাস'},
+{cat:'months',ar:'شَوَّال',pr:'শাওয়াল',bn:'শাওয়াল (১০ম মাস)',def:'ঈদুল ফিতরের মাস'},
+{cat:'months',ar:'ذُو الْقَعْدَة',pr:'জুল কাদা',bn:'জিলকদ (১১তম)',def:'পবিত্র মাস'},
+{cat:'months',ar:'ذُو الْحِجَّة',pr:'জুল হিজ্জা',bn:'জিলহজ (১২তম)',def:'হজ ও ঈদুল আযহার মাস'},
+
+// ════════════════════════════════════════
+// 🔬 বিজ্ঞান
+// ════════════════════════════════════════
+{cat:'science',ar:'عِلْم',pr:'ইলম',bn:'বিজ্ঞান / জ্ঞান',def:'পদ্ধতিগত জ্ঞানের শাখা'},
+{cat:'science',ar:'كِيمِيَاء',pr:'কিমিয়া',bn:'রসায়ন',def:'পদার্থের গুণ ও পরিবর্তনের বিজ্ঞান'},
+{cat:'science',ar:'فِيزِيَاء',pr:'ফিযিয়া',bn:'পদার্থবিজ্ঞান',def:'শক্তি ও পদার্থের বিজ্ঞান'},
+{cat:'science',ar:'أَحْيَاء',pr:'আহিয়া',bn:'জীববিজ্ঞান',def:'জীবের বিজ্ঞান'},
+{cat:'science',ar:'رِيَاضِيَات',pr:'রিয়াদিয়াত',bn:'গণিত',def:'সংখ্যা ও পরিমাপের বিজ্ঞান'},
+{cat:'science',ar:'فَلَك',pr:'ফালাক',bn:'জ্যোতির্বিজ্ঞান',def:'মহাকাশ ও তারার বিজ্ঞান'},
+{cat:'science',ar:'ذَرَّة',pr:'যার্রা',bn:'পরমাণু',def:'পদার্থের ক্ষুদ্রতম একক'},
+{cat:'science',ar:'طَاقَة',pr:'তাকা',bn:'শক্তি / এনার্জি',def:'কাজ করার সামর্থ্য'},
+{cat:'science',ar:'جَاذِبِيَّة',pr:'জাযবিয়া',bn:'মাধ্যাকর্ষণ',def:'বস্তুকে পৃথিবীর দিকে টানা'},
+{cat:'science',ar:'ضَوْء',pr:'দাউ',bn:'আলো',def:'দেখার জন্য প্রয়োজনীয় শক্তি'},
+{cat:'science',ar:'صَوْت',pr:'সাওত',bn:'শব্দ / আওয়াজ',def:'কানে শোনার যোগ্য কম্পন'},
+{cat:'science',ar:'حَرَارَة',pr:'হারারা',bn:'তাপ',def:'বস্তুর তাপমাত্রা-বৃদ্ধির শক্তি'},
+{cat:'science',ar:'مَاء',pr:'মাআ',bn:'পানি (H₂O)',def:'দুই হাইড্রোজেন ও এক অক্সিজেনের যৌগ'},
+{cat:'science',ar:'هَوَاء',pr:'হাওয়া',bn:'বায়ু / হাওয়া',def:'নাইট্রোজেন ও অক্সিজেনের মিশ্রণ'},
+{cat:'science',ar:'مَغْنَاطِيس',pr:'মাগনাতিস',bn:'চুম্বক',def:'লোহাকে আকর্ষণকারী পদার্থ'},
+
+// ════════════════════════════════════════
+// 🍳 রান্না ও রন্ধনশিল্প
+// ════════════════════════════════════════
+{cat:'cooking',ar:'طَبَخَ',pr:'তাবাখা',bn:'রান্না করা',def:'আগুনে খাবার তৈরি করা'},
+{cat:'cooking',ar:'فُرْن',pr:'ফুরন',bn:'চুলা / ওভেন',def:'রান্নার উষ্ণতার উৎস'},
+{cat:'cooking',ar:'قِدْر',pr:'কিদর',bn:'হাঁড়ি / পাতিল',def:'রান্নার পাত্র'},
+{cat:'cooking',ar:'مَلْعَقَة',pr:'মালআকা',bn:'চামচ',def:'তরল বা শুকনো খাবার পরিবেশনের যন্ত্র'},
+{cat:'cooking',ar:'سِكِّين',pr:'সিক্কিন',bn:'ছুরি / বঁটি',def:'কাটার ধারালো যন্ত্র'},
+{cat:'cooking',ar:'صَحْن',pr:'সাহন',bn:'থালা / প্লেট',def:'খাবার পরিবেশনের পাত্র'},
+{cat:'cooking',ar:'كُوب',pr:'কুব',bn:'কাপ',def:'পানীয় পানের পাত্র'},
+{cat:'cooking',ar:'شَوَى',pr:'শাওয়া',bn:'ভাজা / গ্রিল করা',def:'আগুনে পোড়ানো রান্না'},
+{cat:'cooking',ar:'سَلَقَ',pr:'সালাকা',bn:'সেদ্ধ করা',def:'পানিতে ফুটিয়ে রান্না করা'},
+{cat:'cooking',ar:'وَصَفَة',pr:'ওয়াসাফা',bn:'রেসিপি',def:'রান্নার নির্দেশিকা'},
+{cat:'cooking',ar:'نَكْهَة',pr:'নাকহা',bn:'স্বাদ / ফ্লেভার',def:'খাবারের বিশেষ স্বাদ'},
+{cat:'cooking',ar:'حُلْو',pr:'হুলু',bn:'মিষ্টি',def:'চিনি বা মধুর স্বাদ'},
+{cat:'cooking',ar:'حَامِض',pr:'হামিদ',bn:'টক / অম্ল',def:'লেবু বা তেঁতুলের স্বাদ'},
+{cat:'cooking',ar:'حَارّ',pr:'হার্র',bn:'ঝাল',def:'মরিচের ঝাঁজালো স্বাদ'},
+{cat:'cooking',ar:'مُرّ',pr:'মুর্র',bn:'তেতো',def:'করলার মতো স্বাদ'},
+
+// ════════════════════════════════════════
+// ❓ প্রশ্নবাচক শব্দ
+// ════════════════════════════════════════
+{cat:'question',ar:'مَن',pr:'মান',bn:'কে?',def:'ব্যক্তি সম্পর্কে প্রশ্ন'},
+{cat:'question',ar:'مَا / مَاذَا',pr:'মা / মাযা',bn:'কী?',def:'বস্তু বা বিষয় সম্পর্কে প্রশ্ন'},
+{cat:'question',ar:'أَيْن',pr:'আইন',bn:'কোথায়?',def:'স্থান সম্পর্কে প্রশ্ন'},
+{cat:'question',ar:'مَتَى',pr:'মাতা',bn:'কখন?',def:'সময় সম্পর্কে প্রশ্ন'},
+{cat:'question',ar:'كَيْف',pr:'কাইফ',bn:'কীভাবে?',def:'পদ্ধতি সম্পর্কে প্রশ্ন'},
+{cat:'question',ar:'لِمَاذَا',pr:'লিমাযা',bn:'কেন?',def:'কারণ সম্পর্কে প্রশ্ন'},
+{cat:'question',ar:'كَمْ',pr:'কাম',bn:'কতটুকু? / কত?',def:'পরিমাণ সম্পর্কে প্রশ্ন'},
+{cat:'question',ar:'أَيُّ',pr:'আইয়ু',bn:'কোনটি?',def:'বিকল্প থেকে বাছাই সম্পর্কে প্রশ্ন'},
+{cat:'question',ar:'هَلْ',pr:'হাল',bn:'কি? (হ্যাঁ/না)',def:'হ্যাঁ বা না উত্তরের প্রশ্ন'},
+{cat:'question',ar:'مِن أَيْن',pr:'মিন আইন',bn:'কোথা থেকে?',def:'উৎস সম্পর্কে প্রশ্ন'},
+{cat:'question',ar:'إِلَى أَيْن',pr:'ইলা আইন',bn:'কোথায় যাচ্ছ?',def:'গন্তব্য সম্পর্কে প্রশ্ন'},
+{cat:'question',ar:'بِكَمْ',pr:'বিকাম',bn:'কত দামে?',def:'মূল্য সম্পর্কে প্রশ্ন'},
+{cat:'question',ar:'مَنْ مَعَكَ',pr:'মান মাআক',bn:'তোমার সাথে কে?',def:'সঙ্গী সম্পর্কে প্রশ্ন'},
+
+];
+
+// ════════════════════════════════════════
+// META
+// ════════════════════════════════════════
+const catMeta = {
+  salat:     {icon:'🕌', name:'ইসলামি শব্দ'},
+  quran:     {icon:'📖', name:'কুরআনি শব্দ'},
+  greet:     {icon:'👋', name:'অভিবাদন ও সৌজন্য'},
+  number:    {icon:'🔢', name:'সংখ্যা'},
+  family:    {icon:'👨‍👩‍👧', name:'পরিবার'},
+  body:      {icon:'🫀', name:'শরীরের অঙ্গ'},
+  food:      {icon:'🍽️', name:'খাবার ও পানীয়'},
+  fruit:     {icon:'🍎', name:'ফলমূল'},
+  vegetable: {icon:'🥦', name:'শাকসবজি'},
+  color:     {icon:'🎨', name:'রং ও বর্ণ'},
+  nature:    {icon:'🌿', name:'প্রকৃতি ও পরিবেশ'},
+  animal:    {icon:'🦁', name:'প্রাণী ও পশু-পাখি'},
+  plant:     {icon:'🌸', name:'গাছপালা ও ফুল'},
+  verb:      {icon:'⚡', name:'ক্রিয়া / কাজ'},
+  adj:       {icon:'✨', name:'বিশেষণ / গুণবাচক'},
+  emotion:   {icon:'❤️', name:'অনুভূতি ও আবেগ'},
+  travel:    {icon:'✈️', name:'ভ্রমণ ও স্থান'},
+  transport: {icon:'🚌', name:'পরিবহন ও যানবাহন'},
+  house:     {icon:'🏠', name:'গৃহ ও আসবাবপত্র'},
+  clothes:   {icon:'👗', name:'পোশাক ও পরিধান'},
+  education: {icon:'📚', name:'শিক্ষা ও বিদ্যালয়'},
+  profession:{icon:'💼', name:'পেশা ও কর্ম'},
+  health:    {icon:'🏥', name:'স্বাস্থ্য ও চিকিৎসা'},
+  sport:     {icon:'⚽', name:'খেলাধুলা'},
+  tech:      {icon:'💻', name:'প্রযুক্তি'},
+  money:     {icon:'💰', name:'অর্থ ও বাণিজ্য'},
+  country:   {icon:'🌍', name:'দেশ ও স্থান'},
+  geography: {icon:'🗺️', name:'ভূগোল'},
+  time:      {icon:'⏰', name:'সময় ও কাল'},
+  days:      {icon:'📅', name:'সপ্তাহের দিন'},
+  months:    {icon:'🌙', name:'হিজরি মাস'},
+  science:   {icon:'🔬', name:'বিজ্ঞান'},
+  cooking:   {icon:'🍳', name:'রান্না ও রন্ধনশিল্প'},
+  question:  {icon:'❓', name:'প্রশ্নবাচক শব্দ'},
+};
+
+let activeCat = 'all';
+
+function buildDict(words) {
+  const dict = document.getElementById('dictionary');
+  const noRes = document.getElementById('no-result');
+  dict.innerHTML = '';
+  if (!words.length) {
+    noRes.style.display = 'block';
+    document.getElementById('visibleCount').textContent = 0;
+    return;
+  }
+  noRes.style.display = 'none';
+  const groups = {};
+  words.forEach(w => { if (!groups[w.cat]) groups[w.cat] = []; groups[w.cat].push(w); });
+  let total = 0;
+  Object.keys(groups).forEach(cat => {
+    const meta = catMeta[cat];
+    const sec = document.createElement('div');
+    sec.className = 'category';
+    sec.innerHTML = `<div class="category-title"><span class="cat-icon">${meta.icon}</span><span class="cat-name">${meta.name}</span><div class="cat-line"></div><span class="cat-count">${groups[cat].length} শব্দ</span></div><div class="word-grid" id="g-${cat}"></div>`;
+    dict.appendChild(sec);
+    const grid = document.getElementById(`g-${cat}`);
+    groups[cat].forEach((w, i) => {
+      total++;
+      const card = document.createElement('div');
+      card.className = 'card';
+      card.style.animationDelay = `${i * 0.035}s`;
+      const arEsc = w.ar.replace(/'/g,"&#39;").replace(/"/g,"&quot;");
+      card.innerHTML = `<div class="card-top"><div class="card-arabic">${w.ar}</div><button class="voice-btn" onclick="speakAr(this,'${arEsc}')" title="আরবি উচ্চারণ শুনুন">🔊</button></div><div class="card-pronun">উচ্চারণ: <span>${w.pr}</span></div><div class="card-divider"></div><div class="card-bangla">${w.bn}</div><div class="card-meaning">${w.def}</div>`;
+      grid.appendChild(card);
+    });
+  });
+  document.getElementById('visibleCount').textContent = total;
+}
+
+function filterWords() {
+  const q = document.getElementById('searchInput').value.trim().toLowerCase();
+  let filtered = activeCat === 'all' ? data : data.filter(w => w.cat === activeCat);
+  if (q) filtered = filtered.filter(w =>
+    w.ar.includes(q) || w.bn.includes(q) || w.pr.toLowerCase().includes(q) || w.def.includes(q)
+  );
+  buildDict(filtered);
+}
+
+function showCat(cat, el) {
+  activeCat = cat;
+  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+  el.classList.add('active');
+  filterWords();
+}
+
+// ════════════════════════════════════════
+// 🔊 VOICE / SPEECH
+// ════════════════════════════════════════
+let arVoice = null;
+let currentBtn = null;
+
+function initVoice() {
+  const tryFind = () => {
+    const voices = speechSynthesis.getVoices();
+    arVoice = voices.find(v => v.lang === 'ar-SA') ||
+              voices.find(v => v.lang.startsWith('ar')) ||
+              null;
+  };
+  tryFind();
+  if (speechSynthesis.onvoiceschanged !== undefined) {
+    speechSynthesis.onvoiceschanged = tryFind;
+  }
+}
+
+function speakAr(btn, text) {
+  if (!('speechSynthesis' in window)) {
+    alert('আপনার ব্রাউজার ভয়েস সাপোর্ট করে না।');
+    return;
+  }
+  // If already speaking this btn — stop
+  if (currentBtn === btn && speechSynthesis.speaking) {
+    speechSynthesis.cancel();
+    btn.classList.remove('speaking');
+    btn.textContent = '🔊';
+    currentBtn = null;
+    return;
+  }
+  // Stop any previous
+  speechSynthesis.cancel();
+  if (currentBtn) {
+    currentBtn.classList.remove('speaking');
+    currentBtn.textContent = '🔊';
+  }
+  const utt = new SpeechSynthesisUtterance(text);
+  utt.lang = 'ar-SA';
+  utt.rate = 0.82;
+  utt.pitch = 1.05;
+  if (arVoice) utt.voice = arVoice;
+  btn.classList.add('speaking');
+  btn.textContent = '🔉';
+  currentBtn = btn;
+  utt.onend = () => {
+    btn.classList.remove('speaking');
+    btn.textContent = '🔊';
+    if (currentBtn === btn) currentBtn = null;
+  };
+  utt.onerror = () => {
+    btn.classList.remove('speaking');
+    btn.textContent = '🔊';
+    if (currentBtn === btn) currentBtn = null;
+  };
+  speechSynthesis.speak(utt);
+}
+
+// ════════════════════════════════════════
+// 📱 PWA — Service Worker + Install Prompt
+// ════════════════════════════════════════
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('./sw.js')
+      .then(() => console.log('✅ SW registered'))
+      .catch(e => console.warn('SW error', e));
+  });
+}
+
+let deferredPrompt = null;
+const installBar = document.getElementById('install-bar');
+const installBtn = document.getElementById('install-btn');
+const installDismiss = document.getElementById('install-dismiss');
+
+window.addEventListener('beforeinstallprompt', e => {
+  e.preventDefault();
+  deferredPrompt = e;
+  if (installBar) installBar.style.display = 'flex';
+});
+
+if (installBtn) {
+  installBtn.addEventListener('click', async () => {
+    if (!deferredPrompt) return;
+    deferredPrompt.prompt();
+    const { outcome } = await deferredPrompt.userChoice;
+    deferredPrompt = null;
+    if (installBar) installBar.style.display = 'none';
+  });
+}
+
+if (installDismiss) {
+  installDismiss.addEventListener('click', () => {
+    if (installBar) installBar.style.display = 'none';
+  });
+}
+
+window.addEventListener('appinstalled', () => {
+  if (installBar) installBar.style.display = 'none';
+  deferredPrompt = null;
+});
+
+initVoice();
+
+document.getElementById('totalCount').textContent = data.length;
+buildDict(data);
+</script>
+<!-- PWA Install Bar -->
+<div id="install-bar">
+  <div class="ib-icon">🕌</div>
+  <div class="ib-text">
+    <strong>অ্যাপ হিসেবে ইনস্টল করুন</strong>
+    <span>হোম স্ক্রিনে যোগ করুন • অফলাইনে চলবে</span>
+  </div>
+  <button id="install-btn">📥 ইনস্টল</button>
+  <button id="install-dismiss">পরে</button>
+</div>
+
+</body>
+</html>

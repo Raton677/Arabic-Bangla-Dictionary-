@@ -1,0 +1,26 @@
+{
+  "name": "আরবি-বাংলা অভিধান",
+  "short_name": "আরবি অভিধান",
+  "description": "৫৫০+ শব্দ সহ সম্পূর্ণ আরবি-বাংলা অভিধান — ৩৩টি বিভাগ, ভয়েস উচ্চারণ",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0a1628",
+  "theme_color": "#c9a84c",
+  "lang": "bn",
+  "categories": ["education", "reference"],
+  "icons": [
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
